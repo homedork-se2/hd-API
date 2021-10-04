@@ -9,11 +9,11 @@ import java.util.List;
 public class UserServices {
 	QueryBuilder queryBuilder = new QueryBuilder();
 
-	public User getUser(String id) {
+	public User getUser(String userId) {
 		return null;
 	}
 
-	public List<Device> getUSerDevices(String id) {
+	public List<Device> getUSerDevices(String userId) {
 		// get user devices from user where userId = id
 		return null;
 	}
