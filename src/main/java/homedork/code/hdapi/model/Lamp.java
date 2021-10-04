@@ -2,11 +2,12 @@ package homedork.code.hdapi.model;
 
 import java.util.UUID;
 
-public class Fan extends Device {
-	public double level;
+public class Lamp extends Device {
+	public double level;    // brightness control
 
-	public Fan() {
+	public Lamp() {
 		this.id = UUID.randomUUID();
+		this.state = "off";
 	}
 
 	public UUID getId() {
@@ -16,7 +17,6 @@ public class Fan extends Device {
 	public String getState() {
 		return state;
 	}
-
 
 	public double getLevel() {
 		return level;

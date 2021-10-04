@@ -79,6 +79,13 @@
             <artifactId>json</artifactId>
             <version>20210307</version>
         </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
+            <version>3.0.18.Final</version>
+            <!-- I have added 3.0.18.Final above as my JBoss was using this version -->
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
