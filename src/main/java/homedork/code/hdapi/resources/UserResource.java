@@ -16,32 +16,32 @@ public class UserResource {
 	/**
 	 * Profile page data
 	 *
-	 * @param id user id
+	 * @param userId user id
 	 * @return user object
 	 */
 	@GET
 	@Path("/{userId}/profile")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public User getUser(@PathParam("userId") String id) {
+	public User getUser(@PathParam("userId") String userId) {
 		System.out.println("GET REQUEST ON USER");
-		System.out.println(id);
-		return userServices.getUser(id);
+		System.out.println(userId);
+		return userServices.getUser(userId);
 	}
 
 	/**
 	 * web/android app home page
 	 * Display all user devices and states
 	 *
-	 * @param id user id
+	 * @param userId user id
 	 * @return list of all user's connected devices
 	 */
 	@GET
 	@Path("/{userId}/devices")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public List<Device> getUserDevices(@PathParam("userId") String id) {
-		return userServices.getUSerDevices(id);
+	public List<Device> getUserDevices(@PathParam("userId") String userId) {
+		return userServices.getUSerDevices(userId);
 	}
 
 

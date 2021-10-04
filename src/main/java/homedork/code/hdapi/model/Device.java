@@ -2,7 +2,7 @@ package homedork.code.hdapi.model;
 
 import java.util.UUID;
 
-public class Device {
+public abstract class Device {
 	public UUID id;
 	public String state;  // "on" and "off"
 
