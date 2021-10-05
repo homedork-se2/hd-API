@@ -1,9 +1,5 @@
 package homedork.code.hdapi.comm;
 
-import homedork.code.hdapi.model.Device;
-import homedork.code.hdapi.model.Fan;
-import homedork.code.hdapi.model.FloorLamp;
-
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -15,6 +11,7 @@ public class Client {
 
 	public Socket socket;
 	public DataInputStream dataInputStream;
+	public ObjectInputStream objectInputStream;
 	public DataOutputStream dataOutputStream;
 	public BufferedReader bufferedReader;
 
@@ -36,6 +33,7 @@ public class Client {
 			socket = setUpSocket();
 			dataInputStream = getInputStream(socket);
 			dataOutputStream = getOutputStream(socket);
+			objectInputStream = new ObjectInputStream(dataInputStream);
 			bufferedReader = new BufferedReader(new InputStreamReader(dataInputStream));
 		} catch (IOException e) {
 			System.err.println("Error during initial setup: " + e.getMessage());
@@ -44,6 +42,9 @@ public class Client {
 
 
 	//  - response from database server
+	//  - have from logic to map json + response message' from DB server
+	//   json object to POJO called in @QueryBuilder class.
+	//  TODO : only actual json object/array should be returned here, headers/response handled here!
 	public String getResponse() throws IOException {
 		String messageFromDbServer = null;
 		StringBuilder stringBuilder = new StringBuilder();

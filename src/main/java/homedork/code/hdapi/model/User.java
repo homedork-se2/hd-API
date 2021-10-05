@@ -44,6 +44,7 @@ public class User {
 
 	// add a new device to user catalog
 	public void addNewDevice(Device device) {
+		device.setDeviceType(device.getDeviceType());
 		this.userDevices.add(device);
 	}
 }

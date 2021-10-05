@@ -1,6 +1,5 @@
 package homedork.code.hdapi.resources;
 
-import homedork.code.hdapi.model.Fan;
 import homedork.code.hdapi.model.Lamp;
 import homedork.code.hdapi.services.LampServices;
 
@@ -24,7 +23,7 @@ public class LampResource {
 	@Path("/{lampId}/turnOff")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Fan turnFanOff(@PathParam("lampId") String lampId, @PathParam("userId") String userId) {
+	public Lamp turnLampOff(@PathParam("lampId") String lampId, @PathParam("userId") String userId) {
 		return lampServices.turnLampOff(lampId, userId);
 	}
 
@@ -32,7 +31,7 @@ public class LampResource {
 	@Path("/{lampId}/turnOn")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Fan turnFanOn(@PathParam("lampId") String lampId, @PathParam("userId") String userId) {
+	public Lamp turnLampOn(@PathParam("lampId") String lampId, @PathParam("userId") String userId) {
 		return lampServices.turnLampOn(lampId, userId);
 	}
 
@@ -40,7 +39,7 @@ public class LampResource {
 	@Path("/{lampId}")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Fan getLamp(@PathParam("lampId") String lampId, @PathParam("userId") String userId) {
+	public Lamp getLamp(@PathParam("lampId") String lampId, @PathParam("userId") String userId) {
 		return lampServices.getLamp(lampId, userId);
 	}
 
@@ -48,7 +47,7 @@ public class LampResource {
 	@Path("/{lampId}/adjust/{value}")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Fan slideFanValue(@PathParam("lampId") String lampId, @PathParam("value") double value, @PathParam("userId") String userId) {
+	public Lamp slideLampValue(@PathParam("lampId") String lampId, @PathParam("value") double value, @PathParam("userId") String userId) {
 		return lampServices.slideLamp(lampId, value, userId);
 	}
 }

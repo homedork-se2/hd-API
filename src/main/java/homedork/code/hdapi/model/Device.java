@@ -5,7 +5,16 @@ import java.util.UUID;
 public abstract class Device {
 	public UUID id;
 	public String state;  // "on" and "off"
+	public DeviceType deviceType;  // "LAMP","FAN" ...
+	public UUID userId;
 
+	public DeviceType getDeviceType() {
+		return deviceType;
+	}
+
+	public void setDeviceType(DeviceType deviceType) {
+		this.deviceType = deviceType;
+	}
 
 	public String getState() {
 		return state;
@@ -25,5 +34,13 @@ public abstract class Device {
 
 	public void setId(UUID id) {
 		this.id = id;
+	}
+
+	public UUID getUserId() {
+		return userId;
+	}
+
+	public void setUserId(UUID userId) {
+		this.userId = userId;
 	}
 }
