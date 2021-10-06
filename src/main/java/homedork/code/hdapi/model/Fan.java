@@ -7,6 +7,7 @@ public class Fan extends Device {
 
 	public Fan() {
 		this.id = UUID.randomUUID();
+		this.state = "off";
 	}
 
 	public UUID getId() {

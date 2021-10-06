@@ -16,6 +16,7 @@ public class QueryBuilder {
 
 	Client client = new Client();
 
+
 	// test : example
 	public Lamp turnUserLightOff(String userId, String deviceId) throws IOException {
 		String query = "UPDATE devices SET state='off' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "'";
