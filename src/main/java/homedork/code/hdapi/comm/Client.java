@@ -9,6 +9,10 @@ import java.net.Socket;
  */
 public class Client {
 
+	public Client() {
+		setUpClient();
+	}
+
 	public Socket socket;
 	public DataInputStream dataInputStream;
 	public ObjectInputStream objectInputStream;
@@ -28,7 +32,7 @@ public class Client {
 		return new DataInputStream(socket.getInputStream());
 	}
 
-	public void setUp() {
+	public void setUpClient() {
 		try {
 			socket = setUpSocket();
 			dataInputStream = getInputStream(socket);
@@ -40,9 +44,8 @@ public class Client {
 		}
 	}
 
-
 	//  - response from database server
-	//  - have from logic to map json + response message' from DB server
+	//  - have  logic to map json + response message' from DB server
 	//   json object to POJO called in @QueryBuilder class.
 	//  TODO : only actual json object/array should be returned here, headers/response handled here!
 	public String getResponse() throws IOException {
