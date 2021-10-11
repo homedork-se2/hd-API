@@ -7,14 +7,14 @@ public class Lamp extends Device {
 
 	public Lamp() {
 		this.id = UUID.randomUUID();
-		this.state = "off";
+		this.state = State.OFF;
 	}
 
 	public UUID getId() {
 		return id;
 	}
 
-	public String getState() {
+	public State getState() {
 		return state;
 	}
 

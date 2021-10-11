@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public abstract class Device {
 	public UUID id;
-	public String state;  // "on" and "off"
+	public State state;  // "on" and "off"
 	public DeviceType deviceType;  // "LAMP","FAN" ...
 	public UUID userId;
 
@@ -16,16 +16,16 @@ public abstract class Device {
 		this.deviceType = deviceType;
 	}
 
-	public String getState() {
+	public State getState() {
 		return state;
 	}
 
 	public void turnOff() {
-		this.state = "off";
+		this.state = State.OFF;
 	}
 
 	public void turnOn() {
-		this.state = "on";
+		this.state = State.ON;
 	}
 
 	public UUID getId() {

@@ -7,14 +7,14 @@ public class Fan extends Device {
 
 	public Fan() {
 		this.id = UUID.randomUUID();
-		this.state = "off";
+		this.state = State.OFF;
 	}
 
 	public UUID getId() {
 		return id;
 	}
 
-	public String getState() {
+	public State getState() {
 		return state;
 	}
 
