@@ -21,7 +21,7 @@ public class LampServices {
 
 	public Lamp turnLampOff(String lampId, String userId) {
 		try {
-			 return queryBuilder.turnUserLightOff(userId, lampId);
+			 return queryBuilder.turnLightOff(userId, lampId);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -29,14 +29,29 @@ public class LampServices {
 	}
 
 	public Lamp turnLampOn(String lampId, String userId) {
+		try {
+			return queryBuilder.turnLightOn(userId, lampId);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 
-	public Lamp getLamp(String lampId, String userID) {
+	public Lamp getLamp(String lampId, String userId) {
+		try {
+			return queryBuilder.getLamp(userId, lampId);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 
-	public Lamp slideLamp(String lampId, double value, String userId) {
+	public Lamp slideLampOn(String lampId, double value, String userId) {
+		try {
+			return queryBuilder.slideLampOn(userId, lampId, value);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 }
