@@ -17,14 +17,6 @@ public class Client {
 	public DataOutputStream dataOutputStream;
 	public BufferedReader bufferedReader;
 
-	public static void main(String[] args) throws IOException {
-		Client client = new Client();
-
-		client.sendQuery("sesesexxxx");
-
-		System.out.print(client.getResponse());
-	}
-
 
 	public Socket setUpSocket() throws IOException {
 		return new Socket("31.208.15.98", 1234);
