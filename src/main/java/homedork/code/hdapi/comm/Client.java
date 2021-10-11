@@ -1,7 +1,6 @@
 package homedork.code.hdapi.comm;
 
 import java.io.*;
-import java.net.InetAddress;
 import java.net.Socket;
 
 /**
@@ -15,13 +14,20 @@ public class Client {
 
 	public Socket socket;
 	public DataInputStream dataInputStream;
-	public ObjectInputStream objectInputStream;
 	public DataOutputStream dataOutputStream;
 	public BufferedReader bufferedReader;
 
+	public static void main(String[] args) throws IOException {
+		Client client = new Client();
+
+		client.sendQuery("sesesexxxx");
+
+		System.out.print(client.getResponse());
+	}
+
 
 	public Socket setUpSocket() throws IOException {
-		return new Socket(InetAddress.getLocalHost(), 1400);
+		return new Socket("31.208.15.98", 1234);
 	}
 
 	public DataOutputStream getOutputStream(Socket socket) throws IOException {
@@ -37,7 +43,7 @@ public class Client {
 			socket = setUpSocket();
 			dataInputStream = getInputStream(socket);
 			dataOutputStream = getOutputStream(socket);
-			objectInputStream = new ObjectInputStream(dataInputStream);
+			// objectInputStream = new ObjectInputStream(dataInputStream);
 			bufferedReader = new BufferedReader(new InputStreamReader(dataInputStream));
 		} catch (IOException e) {
 			System.err.println("Error during initial setup: " + e.getMessage());
@@ -48,14 +54,21 @@ public class Client {
 	//  - have  logic to map json + response message' from DB server
 	//   json object to POJO called in @QueryBuilder class.
 	//  TODO : only actual json object/array should be returned here, headers/response handled here!
+	//   Good : 200 "OKAY"
+	//   Bad  : 300 "invalid ID" - id doesn't exist
 	public String getResponse() throws IOException {
-		String messageFromDbServer = null;
-		StringBuilder stringBuilder = new StringBuilder();
+		String messageFromDbServer;
 
-		while ((messageFromDbServer = bufferedReader.readLine()) != null) {
-			stringBuilder.append(messageFromDbServer);
-		}
-		return stringBuilder.toString();
+		messageFromDbServer = bufferedReader.readLine();
+		// status code-{json object} or  [{},{}]
+		String[] parts = messageFromDbServer.split("-");
+		String controlMessage = parts[0];
+		String jsonStuff = parts[1];
+
+		if(controlMessage.contains("200")) // everything is okay
+				return jsonStuff;
+
+		return null;
 	}
 
 
@@ -63,6 +76,7 @@ public class Client {
 	public boolean sendQuery(String query) {
 		try {
 			dataOutputStream.writeBytes(query + "\r\n");
+			dataOutputStream.flush();
 			return true;
 		} catch (IOException e) {
 			System.err.println("Error while writing query to DB server: " + e.getMessage());
