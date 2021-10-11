@@ -21,7 +21,7 @@ public class LampServices {
 
 	public Lamp turnLampOff(String lampId, String userId) {
 		try {
-			 return queryBuilder.turnLightOff(userId, lampId);
+			 return queryBuilder.turnLampOff(userId, lampId);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -30,7 +30,7 @@ public class LampServices {
 
 	public Lamp turnLampOn(String lampId, String userId) {
 		try {
-			return queryBuilder.turnLightOn(userId, lampId);
+			return queryBuilder.turnLampOn(userId, lampId);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

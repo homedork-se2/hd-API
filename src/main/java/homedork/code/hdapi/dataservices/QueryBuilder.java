@@ -20,7 +20,7 @@ public class QueryBuilder {
 
     // test : example
     public Lamp turnUserLightOffTest(String userId, String deviceId) throws IOException {
-        String query = "UPDATE devices SET state='false' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
+        String query = "UPDATE devices SET state='off' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
         return (Lamp) jsonLampHandler(query);
     }
 
@@ -104,18 +104,18 @@ public class QueryBuilder {
         return jsonLampHandler(query);
     }
 
-    public Lamp turnLightOff(String userId, String deviceId) throws IOException {
-        String query = "UPDATE devices SET state='false' AND level='0.0' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
+    public Lamp turnLampOff(String userId, String deviceId) throws IOException {
+        String query = "UPDATE devices SET state='on' AND level='0.0' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
         return jsonLampHandler(query);
     }
 
-    public Lamp turnLightOn(String userId, String deviceId) throws IOException {
-        String query = "UPDATE devices SET state='true' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
+    public Lamp turnLampOn(String userId, String deviceId) throws IOException {
+        String query = "UPDATE devices SET state='on' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
         return jsonLampHandler(query);
     }
 
     public Lamp slideLampOn(String userId, String deviceId, double level) throws IOException {
-        String query = "UPDATE devices SET state='true' AND level='" + level + "' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
+        String query = "UPDATE devices SET state='on' AND level='" + level + "' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
         return jsonLampHandler(query);
     }
 
@@ -137,17 +137,17 @@ public class QueryBuilder {
     }
 
     public Fan setFanOn(String userId, String deviceId) throws IOException {
-        String query = "UPDATE devices SET state='true' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
+        String query = "UPDATE devices SET state='on' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
         return jsonFanHandler(query);
     }
 
     public Fan turnFanOff(String userId, String deviceId) throws IOException {
-        String query = "UPDATE devices SET state='false' AND AND level='0.0' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
+        String query = "UPDATE devices SET state='off' AND AND level='0.0' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
         return jsonFanHandler(query);
     }
 
     public Fan slideFanOn(String userId, String deviceId, double level) throws IOException {
-        String query = "UPDATE devices SET state='true' AND level='" + level + "' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
+        String query = "UPDATE devices SET state='on' AND level='" + level + "' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
         return jsonFanHandler(query);
     }
 }
