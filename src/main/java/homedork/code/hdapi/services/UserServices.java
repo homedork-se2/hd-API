@@ -19,7 +19,7 @@ public class UserServices {
 		return null;
 	}
 
-	public List<Device> getUSerDevices(String userId) {
+	public List<Device> getUserDevices(String userId) {
 		try {
 			return queryBuilder.getDevices(userId);
 		} catch (IOException e) {

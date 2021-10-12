@@ -99,8 +99,8 @@ public class QueryBuilder {
         return null;
     }
 
-    public Lamp getLamp(String userId, String lampId) throws IOException {
-        String query = "SELECT from devices WHERE userId='" + userId + "' AND deviceId='" + lampId + "';";
+    public Lamp getLamp(String userId, String deviceId) throws IOException {
+        String query = "SELECT from devices WHERE userId='" + userId + "' AND deviceId='" + deviceId + "';";
         return jsonLampHandler(query);
     }
 
@@ -114,7 +114,7 @@ public class QueryBuilder {
         return jsonLampHandler(query);
     }
 
-    public Lamp slideLampOn(String userId, String deviceId, double level) throws IOException {
+    public Lamp slideLampLevel(String userId, String deviceId, double level) throws IOException {
         String query = "UPDATE devices SET state='on' AND level='" + level + "' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
         return jsonLampHandler(query);
     }
@@ -131,8 +131,8 @@ public class QueryBuilder {
         return null;
     }
 
-    public Fan getFan(String userId, String fanId) throws IOException {
-        String query = "SELECT from devices WHERE userId='" + userId + "' AND deviceId='" + fanId + "';";
+    public Fan getFan(String userId, String deviceId) throws IOException {
+        String query = "SELECT from devices WHERE userId='" + userId + "' AND deviceId='" + deviceId + "';";
         return jsonFanHandler(query);
     }
 
@@ -146,7 +146,7 @@ public class QueryBuilder {
         return jsonFanHandler(query);
     }
 
-    public Fan slideFanOn(String userId, String deviceId, double level) throws IOException {
+    public Fan slideFanLevel(String userId, String deviceId, double level) throws IOException {
         String query = "UPDATE devices SET state='on' AND level='" + level + "' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
         return jsonFanHandler(query);
     }
