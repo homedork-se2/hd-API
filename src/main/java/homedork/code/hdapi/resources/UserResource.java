@@ -41,7 +41,7 @@ public class UserResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public List<Device> getUserDevices(@PathParam("userId") String userId) {
-		return userServices.getUSerDevices(userId);
+		return userServices.getUserDevices(userId);
 	}
 
 

@@ -46,9 +46,9 @@ public class FanServices {
 		return null;
 	}
 
-	public Fan slideFan(String fanId, double value, String userId) {
+	public Fan slideFanLevel(String fanId, double value, String userId) {
 		try {
-			return queryBuilder.slideFanOn(userId, fanId, value);
+			return queryBuilder.slideFanLevel(userId, fanId, value);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

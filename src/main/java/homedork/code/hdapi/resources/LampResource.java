@@ -48,6 +48,6 @@ public class LampResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Lamp slideLampValue(@PathParam("lampId") String lampId, @PathParam("value") double value, @PathParam("userId") String userId) {
-		return lampServices.slideLampOn(lampId, value, userId);
+		return lampServices.slideLampLevel(lampId, value, userId);
 	}
 }

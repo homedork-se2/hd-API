@@ -46,9 +46,9 @@ public class LampServices {
 		return null;
 	}
 
-	public Lamp slideLampOn(String lampId, double value, String userId) {
+	public Lamp slideLampLevel(String lampId, double value, String userId) {
 		try {
-			return queryBuilder.slideLampOn(userId, lampId, value);
+			return queryBuilder.slideLampLevel(userId, lampId, value);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
