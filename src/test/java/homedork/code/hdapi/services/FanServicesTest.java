@@ -3,7 +3,9 @@ package homedork.code.hdapi.services;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class FanServicesTest {
 
 	static FanServices fanServices;
@@ -17,7 +19,7 @@ class FanServicesTest {
 	// REQ:  used database tables are populated
 
 	@BeforeAll
-	static void setup() {
+	void setup() {
 		fanServices = new FanServices();
 	}
 
