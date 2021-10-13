@@ -38,7 +38,7 @@ public class CryptoHandler {
 	IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
 
 
-	public void setUpCipher() throws NoSuchPaddingException, NoSuchAlgorithmException, UnrecoverableEntryException, CertificateException, KeyStoreException, IOException {
+	public void setUpCipher() throws Exception{
 		cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
 	}
 
@@ -51,7 +51,7 @@ public class CryptoHandler {
 		return Base64.getEncoder().encodeToString(encryptedBytes);
 	}
 
-	public String aesDecrypt(byte[] cipherText) throws InvalidAlgorithmParameterException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException, UnrecoverableEntryException, CertificateException, KeyStoreException, IOException, NoSuchAlgorithmException {
+	public String aesDecrypt(byte[] cipherText) throws Exception {
 		String encryptedString;
 		byte[] encryptText = null;
 
