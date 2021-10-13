@@ -44,6 +44,18 @@ public class UserResource {
 		return userServices.getUserDevices(userId);
 	}
 
+	/**
+	 * @param userId     userId created on frontEnd (WC/AC)
+	 * @param userObject Json user Object gotten from request body parsed to POJO
+	 * @return added user object
+	 */
+	@POST
+	@Path("/{userId}/add")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public User addNewUser(@PathParam("userId") String userId, User userObject) {
+		return userServices.addNewUser(userObject);
+	}
 
 	/**
 	 * @return - Fan resource object

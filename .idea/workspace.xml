@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e161120b-1dc8-45be-9def-572ea53de1ee" name="Changes" comment="jUnits test classes and cases implemented for FanServices, UserServices, LampServices and the QueryBuilder class.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/dataservices/QueryBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/dataservices/QueryBuilderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/FanServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/FanServicesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/LampServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/LampServicesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/UserServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/UserServicesTest.java" afterDir="false" />
+    <list default="true" id="e161120b-1dc8-45be-9def-572ea53de1ee" name="Changes" comment="Test classes life cycle instantiations.">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/dataservices/QueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/dataservices/QueryBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/UserResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/UserServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +116,7 @@
       <workItem from="1633946599775" duration="4086000" />
       <workItem from="1633953931681" duration="4630000" />
       <workItem from="1633960325621" duration="4713000" />
-      <workItem from="1633995699202" duration="9436000" />
+      <workItem from="1633995699202" duration="14418000" />
     </task>
     <task id="LOCAL-00001" summary="removed main">
       <created>1633959232223</created>
@@ -139,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633999574103</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Test classes life cycle instantiations.">
+      <created>1634047422243</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1634047422243</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,7 +166,8 @@
     <MESSAGE value="removed main" />
     <MESSAGE value="changed state to enum" />
     <MESSAGE value="jUnits test classes and cases implemented for FanServices, UserServices, LampServices and the QueryBuilder class." />
-    <option name="LAST_COMMIT_MESSAGE" value="jUnits test classes and cases implemented for FanServices, UserServices, LampServices and the QueryBuilder class." />
+    <MESSAGE value="Test classes life cycle instantiations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test classes life cycle instantiations." />
   </component>
   <component name="regexState">
     <option name="map">
