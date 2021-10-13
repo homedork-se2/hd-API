@@ -23,7 +23,7 @@ public class Client {
 
 
 	public Socket setUpSocket() throws IOException {
-		return new Socket("31.208.15.98", 1234);
+		return new Socket("SERVER ADDRESS", 1234);
 	}
 
 	public DataOutputStream getOutputStream(Socket socket) throws IOException {
