@@ -27,4 +27,13 @@ public class UserServices {
 		}
 		return null;
 	}
+
+	public User addNewUser(User user) {
+		try {
+			return queryBuilder.addNewUser(user);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

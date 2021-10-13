@@ -3,9 +3,11 @@ package homedork.code.hdapi.dataservices;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
 import java.io.IOException;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class QueryBuilderTest {
 
 	static QueryBuilder queryBuilder;
@@ -20,7 +22,7 @@ class QueryBuilderTest {
 	// REQ:  used database tables are populated
 
 	@BeforeAll
-	static void setup() {
+	void setup() {
 		queryBuilder = new QueryBuilder();
 	}
 
