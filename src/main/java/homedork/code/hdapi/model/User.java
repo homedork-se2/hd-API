@@ -2,18 +2,17 @@ package homedork.code.hdapi.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class User {
 	public String name;
 	public String email;
-	public UUID id;
+	public String id;
 	public List<Device> userDevices;
 
-	public User(String name, String email) {
+	public User(String name, String email, String id) {
 		this.name = name;
 		this.email = email;
-		this.id = UUID.randomUUID(); // ?*
+		this.id = id;
 		this.userDevices = new ArrayList<>();
 	}
 
@@ -33,7 +32,7 @@ public class User {
 		this.email = email;
 	}
 
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
