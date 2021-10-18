@@ -34,6 +34,8 @@ public class QueryBuilder {
 
 		if(b) {
 			String jsonArray = client.getResponse(); // handle json object here - utility class?
+			if(jsonArray == null)
+				return null;
 			return JsonJavaParser.toLampObjects(jsonArray); // lamp java object returned!
 		}
 		return null;
@@ -44,6 +46,8 @@ public class QueryBuilder {
 
 		if(b) {
 			String jsonObject = client.getResponse();
+			if(jsonObject == null)
+				return null;
 			return JsonJavaParser.toLampObject(jsonObject);
 		}
 		return null;
@@ -54,6 +58,8 @@ public class QueryBuilder {
 
 		if(b) {
 			String jsonObject = client.getResponse();
+			if(jsonObject == null)
+				return null;
 			return JsonJavaParser.toFanObject(jsonObject);
 		}
 		return null;
@@ -64,6 +70,8 @@ public class QueryBuilder {
 
 		if(b) {
 			String jsonObject = client.getResponse();
+			if(jsonObject == null)
+				return null;
 			return JsonJavaParser.toUserObject(jsonObject);
 		}
 		return null;
@@ -74,6 +82,8 @@ public class QueryBuilder {
 
 		if(b) {
 			String jsonArray = client.getResponse();
+			if(jsonArray == null)
+				return null;
 			return JsonJavaParser.toDeviceObjects(jsonArray);
 		}
 		return null;
@@ -97,6 +107,8 @@ public class QueryBuilder {
 
 		if(b) {
 			String jsonArray = client.getResponse();
+			if(jsonArray == null)
+				return null;
 			return JsonJavaParser.toLampObjects(jsonArray);
 		}
 		return null;
@@ -129,6 +141,8 @@ public class QueryBuilder {
 
 		if(b) {
 			String jsonArray = client.getResponse();
+			if(jsonArray == null)
+				return null;
 			return JsonJavaParser.toFanObjects(jsonArray);
 		}
 		return null;

@@ -19,6 +19,10 @@ import java.util.Base64;
 public class CryptoHandler {
 
 
+	public CryptoHandler() throws Exception {
+		setUpCipher();
+	}
+
 	// test
 	public static void main(String[] args) throws Exception {
 		CryptoHandler cryptoHandler = new CryptoHandler();
@@ -38,7 +42,7 @@ public class CryptoHandler {
 	IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
 
 
-	public void setUpCipher() throws Exception{
+	private void setUpCipher() throws Exception{
 		cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
 	}
 

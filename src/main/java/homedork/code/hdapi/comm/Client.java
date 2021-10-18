@@ -12,7 +12,11 @@ import java.nio.charset.StandardCharsets;
 public class Client {
 
 	public Client() {
-		setUpClient();
+		try {
+			setUpClient();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public Socket socket;
@@ -34,13 +38,13 @@ public class Client {
 		return new DataInputStream(socket.getInputStream());
 	}
 
-	public void setUpClient() {
+	public void setUpClient() throws Exception {
 		try {
 			socket = setUpSocket();
 			dataInputStream = getInputStream(socket);
 			dataOutputStream = getOutputStream(socket);
 			// objectInputStream = new ObjectInputStream(dataInputStream);
-			cryptoHandler = new CryptoHandler();
+			cryptoHandler = new CryptoHandler(); // crashes on socket fail
 			bufferedReader = new BufferedReader(new InputStreamReader(dataInputStream));
 		} catch (IOException e) {
 			System.err.println("Error during initial setup: " + e.getMessage());
@@ -88,6 +92,8 @@ public class Client {
 				e.printStackTrace();
 			}
 		}
+
+		// null handles other control codes[300,350,750] - see docs comment
 		return null;
 	}
 
@@ -97,12 +103,9 @@ public class Client {
 	 */
 	public boolean sendQuery(String query) {
 		try {
-
 			dataOutputStream.writeBytes(cryptoHandler.aesEncrypt(query) + "\r\n");
 			dataOutputStream.flush();
 			return true;
-		} catch (IOException e) {
-			System.err.println("Error while writing query to DB server: " + e.getMessage());
 		} catch (Exception e) {
 			System.err.println("Encryption[ERROR]: " + e.getMessage());
 			e.printStackTrace();

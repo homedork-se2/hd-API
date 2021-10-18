@@ -4,14 +4,16 @@ import java.util.UUID;
 
 public abstract class Device {
 	public UUID id;
-	public State state;  // "on" and "off"
-	public DeviceType deviceType;  // "LAMP","FAN" ...
+	public State state;  // "on" and "off" for all device types.
+	public DeviceType deviceType;  // "LAMP","FAN" , "THERMOMETER", "CURTAIN" ...
 	public UUID userId;
+	public double level;  // brightness : Lamp[ceiling + floor] . Speed : Fan . Warmth : Thermometer
 
 	public DeviceType getDeviceType() {
 		return deviceType;
 	}
 
+	// for some reasons we have this here, but I -@Willz think it will be a time saver soon.
 	public void setDeviceType(DeviceType deviceType) {
 		this.deviceType = deviceType;
 	}
@@ -38,5 +40,17 @@ public abstract class Device {
 
 	public void setUserId(UUID userId) {
 		this.userId = userId;
+	}
+
+	public void setState(State state) {
+		this.state = state;
+	}
+
+	public double getLevel() {
+		return level;
+	}
+
+	public void setLevel(double level) {
+		this.level = level;
 	}
 }
