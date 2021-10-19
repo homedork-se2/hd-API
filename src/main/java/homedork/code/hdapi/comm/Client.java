@@ -1,5 +1,6 @@
 package homedork.code.hdapi.comm;
 
+import homedork.code.hdapi.model.User;
 import homedork.code.hdapi.security.CryptoHandler;
 
 import java.io.*;
@@ -19,6 +20,18 @@ public class Client {
 		}
 	}
 
+	public static void main(String[] args) throws IOException {
+		Client client = new Client();
+		User user = new User("Dan", "rihanna@gmail.com", "453242uggg");
+
+		String s = String.format("INSERT INTO `users` values('%s','%s','%s')", user.getUuid(), user.getName(),
+				user.getEmail());
+
+		client.sendQuery(s);
+
+		System.out.println(client.getResponse());
+	}
+
 	public Socket socket;
 	public DataInputStream dataInputStream;
 	public DataOutputStream dataOutputStream;
@@ -27,7 +40,7 @@ public class Client {
 
 
 	public Socket setUpSocket() throws IOException {
-		return new Socket("SERVER ADDRESS", 1234);
+		return new Socket("31.208.15.98", 1234);
 	}
 
 	public DataOutputStream getOutputStream(Socket socket) throws IOException {
@@ -43,7 +56,8 @@ public class Client {
 			socket = setUpSocket();
 			dataInputStream = getInputStream(socket);
 			dataOutputStream = getOutputStream(socket);
-			// objectInputStream = new ObjectInputStream(dataInputStream);
+
+
 			cryptoHandler = new CryptoHandler(); // crashes on socket fail
 			bufferedReader = new BufferedReader(new InputStreamReader(dataInputStream));
 		} catch (IOException e) {
@@ -75,25 +89,31 @@ public class Client {
 	 * @throws IOException -
 	 */
 	public String getResponse() throws IOException {
-		String messageFromDbServer;
 
-		messageFromDbServer = bufferedReader.readLine();
+		try {
+			String messageFromDbServer;
 
-		// status code-{json object}/[{},{}]/null
-		String[] parts = messageFromDbServer.split("-");
+			messageFromDbServer = bufferedReader.readLine();
 
-		String controlMessage = parts[0];
-		String encryptedJsonStuff = parts[1];
+			// status code-{json object}/[{},{}]/null
+			String[] parts = messageFromDbServer.split("-");
 
-		if(controlMessage.contains("200")) {  // everything is okay
-			try {
-				return cryptoHandler.aesDecrypt(encryptedJsonStuff.getBytes(StandardCharsets.UTF_8));
-			} catch (Exception e) {
-				e.printStackTrace();
+			String controlMessage = parts[0];
+			String encryptedJsonStuff = parts[1];
+
+			if(controlMessage.contains("200")) {  // everything is okay
+				try {
+					return cryptoHandler.aesDecrypt(encryptedJsonStuff.getBytes(StandardCharsets.UTF_8));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
-		}
 
-		// null handles other control codes[300,350,750] - see docs comment
+			// null handles other control codes[300,350,750] - see docs comment
+			return null;
+		} catch (Exception e) {
+			System.err.println("Decryption[ERROR]: " + e.getMessage());
+		}
 		return null;
 	}
 
@@ -108,7 +128,6 @@ public class Client {
 			return true;
 		} catch (Exception e) {
 			System.err.println("Encryption[ERROR]: " + e.getMessage());
-			e.printStackTrace();
 		}
 		return false;
 	}

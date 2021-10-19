@@ -45,15 +45,15 @@ public class UserResource {
 	}
 
 	/**
-	 * @param userId     userId created on frontEnd (WC/AC)
-	 * @param userObject Json user Object gotten from request body parsed to POJO
 	 * @return added user object
 	 */
 	@POST
-	@Path("/{userId}/add")
+	@Path("/add/{uuid}/{name}/{email}")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public User addNewUser(@PathParam("userId") String userId, User userObject) {
+	public User addNewUser(@PathParam("uuid") String userId, @PathParam("name") String name, @PathParam("email") String email) {
+		System.out.println("user");
+		User userObject = new User(name, email, userId);
 		return userServices.addNewUser(userObject);
 	}
 
@@ -71,11 +71,10 @@ public class UserResource {
 	/**
 	 * @return - Thermometer resource object
 	 */
-	@Path("/{userId}/therm")
+	@Path("/{userId}/therms")
 	public ThermResource getThermResource() {
 		return new ThermResource();
 	}
-
 
 	/**
 	 * @return - Curtain resource object

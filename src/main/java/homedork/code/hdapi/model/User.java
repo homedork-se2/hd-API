@@ -6,14 +6,13 @@ import java.util.List;
 public class User {
 	public String name;
 	public String email;
-	public String id;
-	public List<Device> userDevices;
+	public String uuid;
 
-	public User(String name, String email, String id) {
+
+	public User(String name, String email, String uuid) {
 		this.name = name;
 		this.email = email;
-		this.id = id;
-		this.userDevices = new ArrayList<>();
+		this.uuid = uuid;
 	}
 
 	public String getName() {
@@ -32,18 +31,8 @@ public class User {
 		this.email = email;
 	}
 
-	public String getId() {
-		return id;
+	public String getUuid() {
+		return uuid;
 	}
 
-
-	public List<Device> getUserDevices() {
-		return userDevices;
-	}
-
-	// add a new device to user catalog
-	public void addNewDevice(Device device) {
-		device.setDeviceType(device.getDeviceType());
-		this.userDevices.add(device);
-	}
 }

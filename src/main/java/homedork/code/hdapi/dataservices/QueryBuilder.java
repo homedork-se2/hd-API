@@ -91,12 +91,12 @@ public class QueryBuilder {
 
 	// User Queries
 	public User getUser(String userId) throws IOException {
-		String query = "SELECT from users WHERE userId='" + userId + "';";
+		String query = "SELECT * from users WHERE uuid='" + userId + "';";
 		return jsonUserHandler(query);
 	}
 
 	public List<Device> getDevices(String userId) throws IOException {
-		String query = "SELECT from devices WHERE userId='" + userId + "';";
+		String query = "SELECT from devices WHERE uuid='" + userId + "';";
 		return jsonUserDevicesHandler(query);
 	}
 
@@ -169,8 +169,11 @@ public class QueryBuilder {
 	}
 
 	public User addNewUser(@NotNull User user) throws IOException {
-		String query = String.format("INSERT INTO users values(%s,%s,%s,%s)", user.getName(), user.getEmail(),
-				user.getId().toString(), null);
-		return jsonUserHandler(query);
+		// INSERT INTO `users` (`uuid`, `name`, `email`) VALUES ('dada', 'dada', 'dada');
+		String q = String.format("INSERT INTO `users` (`uuid`, `name`, `email`) VALUES ('%s', '%s', '%s');", user.getUuid(), user.getName(),
+				user.getEmail());
+
+
+		return jsonUserHandler(q);
 	}
 }
