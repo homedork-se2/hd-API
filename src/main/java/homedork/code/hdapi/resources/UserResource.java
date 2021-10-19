@@ -57,6 +57,9 @@ public class UserResource {
 		return userServices.addNewUser(userObject);
 	}
 
+
+	/* ******* User's Devices ************** */
+
 	/**
 	 * @return - Fan resource object
 	 */
@@ -66,10 +69,19 @@ public class UserResource {
 	}
 
 	/**
-	 * @return - Lamp resource object
+	 * @return - Thermometer resource object
 	 */
-	@Path("/{userId}/lamps")
-	public LampResource getLampResource() {
-		return new LampResource();
+	@Path("/{userId}/therm")
+	public ThermResource getThermResource() {
+		return new ThermResource();
+	}
+
+
+	/**
+	 * @return - Curtain resource object
+	 */
+	@Path("/{userId}/curtains")
+	public CurtainResource getCurtainResource() {
+		return new CurtainResource();
 	}
 }
