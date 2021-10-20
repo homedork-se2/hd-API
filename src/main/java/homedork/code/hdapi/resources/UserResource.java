@@ -83,4 +83,12 @@ public class UserResource {
 	public CurtainResource getCurtainResource() {
 		return new CurtainResource();
 	}
+
+	/**
+	 * @return - Lamp resource object
+	 */
+	@Path("/{userId}/lamps")
+	public LampResource getLampResource() {
+		return new LampResource();
+	}
 }
