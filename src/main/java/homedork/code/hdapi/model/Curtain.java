@@ -4,8 +4,8 @@ import java.util.UUID;
 
 public class Curtain extends Device {
 
-	public Curtain() {
-		this.id = UUID.randomUUID();
+	public Curtain(String id) {
+		this.id = id;
 		this.state = State.OFF;
 	}
 }

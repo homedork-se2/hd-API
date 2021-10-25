@@ -5,8 +5,8 @@ import java.util.UUID;
 public class Thermometer extends Device {
 
 
-	public Thermometer() {
-		this.id = UUID.randomUUID();
+	public Thermometer(String id) {
+		this.id = id;
 		this.state = State.OFF;
 	}
 

@@ -9,12 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e161120b-1dc8-45be-9def-572ea53de1ee" name="Changes" comment="USER POST HTTP">
+    <list default="true" id="e161120b-1dc8-45be-9def-572ea53de1ee" name="Changes" comment="CurtainServicesTest and ThermServicesTest classes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/dataservices/QueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/dataservices/QueryBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/CurtainServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/CurtainServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/ThermServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/ThermServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/utility/JsonJavaParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/utility/JsonJavaParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/comm/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/comm/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Curtain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Curtain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Fan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Fan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Lamp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Lamp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Thermometer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Thermometer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/comm/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/comm/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/hd-API-1.0-SNAPSHOT/WEB-INF/classes/homedork/code/hdapi/comm/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/hd-API-1.0-SNAPSHOT/WEB-INF/classes/homedork/code/hdapi/comm/Client.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +53,10 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/homedork/code/hdapi/comm/Client.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/LampServicesTest.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -73,13 +81,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hd-server" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.52">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homedork.code.hdapi.comm.Client" />
       <module name="hd-API" />
@@ -193,8 +201,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests#17" />
         <item itemvalue="Application.Client" />
+        <item itemvalue="HTTP Request.generated-requests#17" />
       </list>
     </recent_temporary>
   </component>
@@ -209,6 +217,7 @@
       <workItem from="1633946599775" duration="4086000" />
       <workItem from="1633953931681" duration="4630000" />
       <workItem from="1634585347632" duration="19954000" />
+      <workItem from="1635157952952" duration="9066000" />
     </task>
     <task id="LOCAL-00001" summary="removed main">
       <created>1633959232223</created>
