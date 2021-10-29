@@ -1,12 +1,10 @@
 package homedork.code.hdapi.model;
 
-import java.util.UUID;
-
 public abstract class Device {
-	public UUID id;
+	public String id;
 	public State state;  // "on" and "off" for all device types.
 	public DeviceType deviceType;  // "LAMP","FAN" , "THERMOMETER", "CURTAIN" ...
-	public UUID userId;
+	public String userId;
 	public double level;  // brightness : Lamp[ceiling + floor] . Speed : Fan . Warmth : Thermometer
 
 	public DeviceType getDeviceType() {
@@ -30,15 +28,15 @@ public abstract class Device {
 		this.state = State.ON;
 	}
 
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
-	public UUID getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(UUID userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 
@@ -52,5 +50,20 @@ public abstract class Device {
 
 	public void setLevel(double level) {
 		this.level = level;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	@Override
+	public String toString() {
+		return "Device{" +
+				"id='" + id + '\'' +
+				", state=" + state +
+				", deviceType=" + deviceType +
+				", userId='" + userId + '\'' +
+				", level=" + level +
+				'}';
 	}
 }

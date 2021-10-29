@@ -4,6 +4,7 @@ import homedork.code.hdapi.model.User;
 import homedork.code.hdapi.security.CryptoHandler;
 
 import java.io.*;
+import java.net.InetAddress;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 
@@ -24,10 +25,13 @@ public class Client {
 		Client client = new Client();
 		User user = new User("Dan", "rihanna@gmail.com", "453242uggg");
 
-		String s = String.format("INSERT INTO `users` values('%s','%s','%s')", user.getUuid(), user.getName(),
-				user.getEmail());
+		/*String s = String.format("INSERT INTO `users` values('%s','%s','%s')", user.getUuid(), user.getName(),
+				user.getEmail());*/
 
-		client.sendQuery(s);
+
+		String query = String.format("SELECT * from devices WHERE deviceId='%s' AND WHERE userId='%s';", "727272", "45343");
+
+		client.sendQuery(query);
 
 		System.out.println(client.getResponse());
 	}
@@ -40,7 +44,7 @@ public class Client {
 
 
 	public Socket setUpSocket() throws IOException {
-		return new Socket("31.208.15.98", 1234);
+		return new Socket(InetAddress.getLocalHost(), 1234);
 	}
 
 	public DataOutputStream getOutputStream(Socket socket) throws IOException {
@@ -112,7 +116,7 @@ public class Client {
 			// null handles other control codes[300,350,750] - see docs comment
 			return null;
 		} catch (Exception e) {
-			System.err.println("Decryption[ERROR]: " + e.getMessage());
+			System.err.println("getResponse[ERROR]: " + e.getMessage());
 		}
 		return null;
 	}
@@ -123,11 +127,13 @@ public class Client {
 	 */
 	public boolean sendQuery(String query) {
 		try {
+			// API prefix
+			query = "API-" + query;
 			dataOutputStream.writeBytes(cryptoHandler.aesEncrypt(query) + "\r\n");
 			dataOutputStream.flush();
 			return true;
 		} catch (Exception e) {
-			System.err.println("Encryption[ERROR]: " + e.getMessage());
+			System.err.println("sendQuery[ERROR]: " + e.getMessage());
 		}
 		return false;
 	}

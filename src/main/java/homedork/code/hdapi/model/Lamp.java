@@ -4,8 +4,8 @@ import java.util.UUID;
 
 public class Lamp extends Device {
 
-	public Lamp() {
-		this.id = UUID.randomUUID();
+	public Lamp(String id) {
+		this.id = id;
 		this.state = State.OFF;
 	}
 }
