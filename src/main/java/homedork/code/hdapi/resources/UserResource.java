@@ -52,7 +52,7 @@ public class UserResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public User addNewUser(@PathParam("uuid") String userId, @PathParam("name") String name, @PathParam("email") String email) {
-		System.out.println("user");
+		System.out.println("new user");
 		User userObject = new User(name, email, userId);
 		return userServices.addNewUser(userObject);
 	}

@@ -21,6 +21,7 @@ public class Client {
 		}
 	}
 
+	// test
 	public static void main(String[] args) throws IOException {
 		Client client = new Client();
 		User user = new User("Dan", "rihanna@gmail.com", "453242uggg");
@@ -31,7 +32,10 @@ public class Client {
 
 		String query = String.format("SELECT * from devices WHERE deviceId='%s' AND WHERE userId='%s';", "727272", "45343");
 
-		client.sendQuery(query);
+
+		// [D:deviceID:ON or level:userID]   D:2311:OFF:45343
+		String hubTestQuery = "D:2311:33:45343";
+		client.sendQuery(hubTestQuery);
 
 		System.out.println(client.getResponse());
 	}

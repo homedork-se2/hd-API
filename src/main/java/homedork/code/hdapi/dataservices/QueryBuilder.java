@@ -166,7 +166,7 @@ public class QueryBuilder {
 	}
 
 	public Fan turnFanOff(String userId, String deviceId) throws IOException {
-		String query = String.format("UPDATE devices SET state='off' AND AND level='0.0' WHERE deviceId='%s' AND WHERE userId='%s';", deviceId, userId);
+		String query = String.format("UPDATE devices SET state='off' AND level='0.0' WHERE deviceId='%s' AND WHERE userId='%s';", deviceId, userId);
 		return jsonFanHandler(query);
 	}
 
@@ -213,7 +213,7 @@ public class QueryBuilder {
 	}
 
 	public Curtain turnCurtainOff(String userId, String deviceId) throws IOException {
-		String query = String.format("UPDATE devices SET state='off' AND AND level='0.0' WHERE deviceId='%s' AND WHERE userId='%s';", deviceId, userId);
+		String query = String.format("UPDATE devices SET state='off' AND level='0.0' WHERE deviceId='%s' AND WHERE userId='%s';", deviceId, userId);
 		return jsonCurtainHandler(query);
 	}
 
@@ -259,7 +259,7 @@ public class QueryBuilder {
 	}
 
 	public Thermometer turnThermOff(String userId, String deviceId) throws IOException {
-		String query = String.format("UPDATE devices SET state='off' AND AND level='0.0' WHERE deviceId='%s' AND WHERE userId='%s';", deviceId, userId);
+		String query = String.format("UPDATE devices SET state='off' AND level='0.0' WHERE deviceId='%s' AND WHERE userId='%s';", deviceId, userId);
 		return jsonThermHandler(query);
 	}
 
