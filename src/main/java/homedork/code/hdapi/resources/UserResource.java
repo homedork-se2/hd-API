@@ -24,7 +24,7 @@ public class UserResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public User getUser(@PathParam("userId") String userId) {
-		System.out.println("GET REQUEST ON USER");
+		System.out.println("GET REQUEST ON USER'S PROFILE");
 		System.out.println(userId);
 		return userServices.getUser(userId);
 	}
@@ -41,6 +41,7 @@ public class UserResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public List<Device> getUserDevices(@PathParam("userId") String userId) {
+		System.out.println("GET REQUEST ON USER'S DEVICES");
 		return userServices.getUserDevices(userId);
 	}
 
@@ -52,7 +53,7 @@ public class UserResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public User addNewUser(@PathParam("uuid") String userId, @PathParam("name") String name, @PathParam("email") String email) {
-		System.out.println("user");
+		System.out.println("NEW USER POSTED");
 		User userObject = new User(name, email, userId);
 		return userServices.addNewUser(userObject);
 	}
