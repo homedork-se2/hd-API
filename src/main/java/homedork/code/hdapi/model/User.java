@@ -6,13 +6,13 @@ import java.util.List;
 public class User {
 	public String name;
 	public String email;
-	public String uuid;
+	public String id;
 
 
-	public User(String name, String email, String uuid) {
+	public User(String name, String email, String id) {
 		this.name = name;
 		this.email = email;
-		this.uuid = uuid;
+		this.id = id;
 	}
 
 	public String getName() {
@@ -31,8 +31,8 @@ public class User {
 		this.email = email;
 	}
 
-	public String getUuid() {
-		return uuid;
+	public String getId() {
+		return id;
 	}
 
 }
