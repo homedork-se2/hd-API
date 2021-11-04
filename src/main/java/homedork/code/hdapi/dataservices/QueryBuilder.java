@@ -66,18 +66,18 @@ public class QueryBuilder {
 	}
 
 	public User getUser(String userId) throws IOException {
-		String query = String.format("SELECT * from users WHERE uuid='%s';", userId);
+		String query = String.format("SELECT * from users WHERE id='%s';", userId);
 		return jsonUserHandler(query);
 	}
 
 	public List<Device> getDevices(String userId) throws IOException {
-		String query = String.format("SELECT * from devices WHERE uuid='%s';", userId);
+		String query = String.format("SELECT * from devices WHERE id='%s';", userId);
 		return jsonUserDevicesHandler(query);
 	}
 
 	public User addNewUser(@NotNull User user) throws IOException {
-		// INSERT INTO `users` (`uuid`, `name`, `email`) VALUES ('dada', 'dada', 'dada');
-		String q = String.format("INSERT INTO `users` (`uuid`, `name`, `email`) VALUES ('%s', '%s', '%s');", user.getUuid(), user.getName(),
+		// INSERT INTO `users` (`id`, `name`, `email`) VALUES ('dada', 'dada', 'dada');
+		String q = String.format("INSERT INTO `users` (`id`, `name`, `email`) VALUES ('%s', '%s', '%s');", user.getId(), user.getName(),
 				user.getEmail());
 
 		return jsonUserHandler(q);
@@ -115,17 +115,17 @@ public class QueryBuilder {
 	}
 
 	public Lamp turnLampOff(String userId, String deviceId) throws IOException {
-		String query = String.format("UPDATE devices SET state='on' AND level='0.0' WHERE deviceId='%s' AND WHERE userId='%s';", deviceId, userId);
+		String query = String.format("UPDATE devices SET state='OFF' AND level='0.0' WHERE id='%s';", deviceId);
 		return jsonLampHandler(query);
 	}
 
 	public Lamp turnLampOn(String userId, String deviceId) throws IOException {
-		String query = String.format("UPDATE devices SET state='on' WHERE deviceId='%s' AND WHERE userId='%s';", deviceId, userId);
+		String query = String.format("UPDATE devices SET state='ON' WHERE id='%s';", deviceId);
 		return jsonLampHandler(query);
 	}
 
 	public Lamp slideLampLevel(String userId, String deviceId, double level) throws IOException {
-		String query = String.format("UPDATE devices SET state='on' AND level='%s' WHERE deviceId='%s' AND WHERE userId='%s';", level, deviceId, userId);
+		String query = String.format("UPDATE devices SET state='ON', level='%f' WHERE id='%s';", level, deviceId);
 		return jsonLampHandler(query);
 	}
 
