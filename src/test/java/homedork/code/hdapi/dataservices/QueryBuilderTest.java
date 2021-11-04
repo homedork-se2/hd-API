@@ -111,11 +111,11 @@ class QueryBuilderTest {
 	@Test
 	void setFanOn() throws IOException {
 		// PASS: set user's(id=userId) fan(id=deviceId) on.
-		Assertions.assertNotNull(queryBuilder.setFanOn(userId, deviceId));
+		Assertions.assertNotNull(queryBuilder.turnFanOn(userId, deviceId));
 
-		Assertions.assertNull(queryBuilder.setFanOn(failUserId, failDeviceId));
-		Assertions.assertNull(queryBuilder.setFanOn(failUserId, deviceId));
-		Assertions.assertNull(queryBuilder.setFanOn(userId, failDeviceId));
+		Assertions.assertNull(queryBuilder.turnFanOn(failUserId, failDeviceId));
+		Assertions.assertNull(queryBuilder.turnFanOn(failUserId, deviceId));
+		Assertions.assertNull(queryBuilder.turnFanOn(userId, failDeviceId));
 
 	}
 

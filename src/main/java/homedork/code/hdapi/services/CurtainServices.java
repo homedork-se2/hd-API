@@ -30,7 +30,7 @@ public class CurtainServices {
 
     public Curtain turnCurtainOn(String curtainId, String userId) {
         try {
-            return queryBuilder.setCurtainOn(userId, curtainId);
+            return queryBuilder.turnCurtainOn(userId, curtainId);
         } catch (IOException e) {
             e.printStackTrace();
         }

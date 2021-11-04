@@ -2,7 +2,6 @@ package homedork.code.hdapi.utility;
 
 import com.google.gson.Gson;
 import homedork.code.hdapi.model.*;
-import homedork.code.hdapi.services.MP3Services;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -40,9 +39,9 @@ public class JsonJavaParser {
 		Gson gson = new Gson();
 		List<Lamp> lamps = new ArrayList<>();
 		JSONArray jsonArray = new JSONArray(json);
-		for (int i = 0; i < jsonArray.toList().size(); i++) {
+		for(int i = 0; i < jsonArray.toList().size(); i++) {
 			JSONObject jsonLampObject = (JSONObject) jsonArray.get(i);
-			Lamp lampObject = gson.fromJson(jsonLampObject.toString(),Lamp.class);
+			Lamp lampObject = gson.fromJson(jsonLampObject.toString(), Lamp.class);
 			lamps.add(lampObject);
 		}
 		return lamps;
@@ -52,9 +51,9 @@ public class JsonJavaParser {
 		Gson gson = new Gson();
 		List<Fan> fans = new ArrayList<>();
 		JSONArray jsonArray = new JSONArray(json);
-		for (int i = 0; i < jsonArray.toList().size(); i++) {
+		for(int i = 0; i < jsonArray.toList().size(); i++) {
 			JSONObject jsonFanObject = (JSONObject) jsonArray.get(i);
-			Fan fanObject = gson.fromJson(jsonFanObject.toString(),Fan.class);
+			Fan fanObject = gson.fromJson(jsonFanObject.toString(), Fan.class);
 			fans.add(fanObject);
 		}
 		return fans;
@@ -64,9 +63,9 @@ public class JsonJavaParser {
 		Gson gson = new Gson();
 		List<Curtain> curtains = new ArrayList<>();
 		JSONArray jsonArray = new JSONArray(json);
-		for (int i = 0; i < jsonArray.toList().size(); i++) {
+		for(int i = 0; i < jsonArray.toList().size(); i++) {
 			JSONObject jsonCurtainObject = (JSONObject) jsonArray.get(i);
-			Curtain curtainObject = gson.fromJson(jsonCurtainObject.toString(),Curtain.class);
+			Curtain curtainObject = gson.fromJson(jsonCurtainObject.toString(), Curtain.class);
 			curtains.add(curtainObject);
 		}
 		return curtains;
@@ -76,9 +75,9 @@ public class JsonJavaParser {
 		Gson gson = new Gson();
 		List<Thermometer> therms = new ArrayList<>();
 		JSONArray jsonArray = new JSONArray(json);
-		for (int i = 0; i < jsonArray.toList().size(); i++) {
+		for(int i = 0; i < jsonArray.toList().size(); i++) {
 			JSONObject jsonThermObject = (JSONObject) jsonArray.get(i);
-			Thermometer thermObject = gson.fromJson(jsonThermObject.toString(),Thermometer.class);
+			Thermometer thermObject = gson.fromJson(jsonThermObject.toString(), Thermometer.class);
 			therms.add(thermObject);
 		}
 		return therms;
