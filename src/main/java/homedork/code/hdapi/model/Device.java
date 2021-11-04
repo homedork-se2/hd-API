@@ -1,6 +1,6 @@
 package homedork.code.hdapi.model;
 
-public abstract class Device {
+public class Device {
     public String id;
     public State state;  // "on" and "off" for all device types.
     public DeviceType deviceType;  // "LAMP","FAN" , "THERMOMETER", "CURTAIN" ...

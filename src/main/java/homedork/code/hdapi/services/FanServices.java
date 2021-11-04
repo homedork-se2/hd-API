@@ -30,7 +30,7 @@ public class FanServices {
 
 	public Fan turnFanOn(String fanId, String userId) {
 		try {
-			return queryBuilder.setFanOn(userId, fanId);
+			return queryBuilder.turnFanOn(userId, fanId);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
