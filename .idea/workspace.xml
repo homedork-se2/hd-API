@@ -9,16 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e161120b-1dc8-45be-9def-572ea53de1ee" name="Changes" comment="API tests addition, some correction in queries for all lamp activities">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/hd_API_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/hd_API_war.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/hd_API_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/hd_API_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="e161120b-1dc8-45be-9def-572ea53de1ee" name="Changes" comment="comm test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/dataservices/QueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/dataservices/QueryBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/security/KeyLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/security/KeyLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/FanServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/FanServicesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/LampServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/LampServicesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/ThermServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/ThermServicesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/UserServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/UserServicesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +36,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="api-test-adds" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -53,9 +49,16 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/LampServicesTest.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/homedork/code/hdapi/comm/Client.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/LampServicesTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -81,11 +84,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../hd-server" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -96,26 +97,85 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.53">
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homedork.code.hdapi.comm.Client" />
+  <component name="RunManager" selected="JUnit.CurtainServicesTest">
+    <configuration name="CurtainServicesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hd-API" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homedork.code.hdapi.comm.*" />
+          <option name="PATTERN" value="homedork.code.hdapi.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="homedork.code.hdapi.services" />
+      <option name="MAIN_CLASS_NAME" value="homedork.code.hdapi.services.CurtainServicesTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="generated-requests#17" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="17" runType="Run single request">
-      <method v="2" />
+    <configuration name="FanServicesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hd-API" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homedork.code.hdapi.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homedork.code.hdapi.services" />
+      <option name="MAIN_CLASS_NAME" value="homedork.code.hdapi.services.FanServicesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="Tomcat 9.0.53" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.53" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="LampServicesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hd-API" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homedork.code.hdapi.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homedork.code.hdapi.services" />
+      <option name="MAIN_CLASS_NAME" value="homedork.code.hdapi.services.LampServicesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LampServicesTest.turnLampOff" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hd-API" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homedork.code.hdapi.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homedork.code.hdapi.services" />
+      <option name="MAIN_CLASS_NAME" value="homedork.code.hdapi.services.LampServicesTest" />
+      <option name="METHOD_NAME" value="turnLampOff" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThermServicesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hd-API" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homedork.code.hdapi.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homedork.code.hdapi.services" />
+      <option name="MAIN_CLASS_NAME" value="homedork.code.hdapi.services.ThermServicesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.52" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.52" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
-      <option name="BROWSER_ID" value="53e2f627-b1a7-4dfa-bfa7-5b83cc034776" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="hd-API:war exploded">
@@ -205,14 +265,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Client" />
-      <item itemvalue="HTTP Request.generated-requests#17" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.53" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.52" />
+      <item itemvalue="JUnit.LampServicesTest" />
+      <item itemvalue="JUnit.LampServicesTest.turnLampOff" />
+      <item itemvalue="JUnit.FanServicesTest" />
+      <item itemvalue="JUnit.ThermServicesTest" />
+      <item itemvalue="JUnit.CurtainServicesTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client" />
-        <item itemvalue="HTTP Request.generated-requests#17" />
+        <item itemvalue="JUnit.CurtainServicesTest" />
+        <item itemvalue="JUnit.ThermServicesTest" />
+        <item itemvalue="JUnit.FanServicesTest" />
+        <item itemvalue="JUnit.LampServicesTest" />
+        <item itemvalue="JUnit.LampServicesTest.turnLampOff" />
       </list>
     </recent_temporary>
   </component>
@@ -229,8 +295,9 @@
       <workItem from="1634585347632" duration="19954000" />
       <workItem from="1635157952952" duration="10055000" />
       <workItem from="1635200850070" duration="14435000" />
-      <workItem from="1635522012897" duration="1083000" />
-      <workItem from="1636108178843" duration="4090000" />
+      <workItem from="1635522012897" duration="1328000" />
+      <workItem from="1635540216914" duration="1419000" />
+      <workItem from="1636030653046" duration="10263000" />
     </task>
     <task id="LOCAL-00001" summary="removed main">
       <created>1633959232223</created>
@@ -295,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635522878164</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="pom file fix maybe">
+      <created>1635523131260</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1635523131260</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

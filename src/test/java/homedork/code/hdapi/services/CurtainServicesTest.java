@@ -1,26 +1,33 @@
 package homedork.code.hdapi.services;
 
+import homedork.code.hdapi.model.Curtain;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class CurtainServicesTest {
 
 	static CurtainServices curtainServices;
-	static String failUserId = "223d-d342-4f55";
-	static String userId = "";
+	static String failUserId = "999999";
+	static String userId = "342212";
 
-	static String failCurtainId = "223d-d342-4f55";
-	static String curtainId = "";
+	static String failCurtainId = "99999";
+	static String curtainId = "34316";
 	static double level = 23.0;
+
+	List<Curtain> curtains;
 
 	// REQ:  used database tables are populated
 
 	@BeforeAll
 	void setUp() {
 		curtainServices = new CurtainServices();
+		curtains = new ArrayList<>();
 	}
 
 	@Test
@@ -29,7 +36,7 @@ class CurtainServicesTest {
 		Assertions.assertNotNull(curtainServices.getAllCurtains(userId));
 
 		// PASS : getting all curtains with fail user ID
-		Assertions.assertNull(curtainServices.getAllCurtains(failUserId));
+		Assertions.assertEquals(curtainServices.getAllCurtains(failUserId), curtains);
 	}
 
 	@Test
@@ -39,10 +46,6 @@ class CurtainServicesTest {
 
 		// PASS : turn off user's(id=failUserId) curtain(id=failCurtainId)
 		Assertions.assertNull(curtainServices.turnCurtainOff(failCurtainId, failUserId));
-		// PASS : turn off user's(id=failUserId) curtain(id=curtainId)
-		Assertions.assertNull(curtainServices.turnCurtainOff(curtainId, failUserId));
-		// PASS : turn off user's(id=userId) curtain(id=failCurtainId)
-		Assertions.assertNull(curtainServices.turnCurtainOff(failCurtainId, userId));
 	}
 
 	@Test
@@ -52,10 +55,6 @@ class CurtainServicesTest {
 
 		// PASS : turn on user's(id=failUserId) curtain(id=failCurtainId)
 		Assertions.assertNull(curtainServices.turnCurtainOn(failCurtainId, failUserId));
-		// PASS : turn on user's(id=failUserId) curtain(id=curtainId)
-		Assertions.assertNull(curtainServices.turnCurtainOn(curtainId, failUserId));
-		// PASS : turn on user's(id=userId) curtain(id=failCurtainId)
-		Assertions.assertNull(curtainServices.turnCurtainOn(failCurtainId, userId));
 	}
 
 	@Test
@@ -65,10 +64,6 @@ class CurtainServicesTest {
 
 		// PASS : get user's(id=failUserId) curtain(id=failCurtainId)
 		Assertions.assertNull(curtainServices.getCurtain(failCurtainId, failUserId));
-		// PASS : get user's(id=failUserId) curtain(id=curtainId)
-		Assertions.assertNull(curtainServices.getCurtain(curtainId, failUserId));
-		// PASS : get user's(id=userId) curtain(id=failCurtainId)
-		Assertions.assertNull(curtainServices.getCurtain(failCurtainId, userId));
 	}
 
 	@Test
@@ -78,9 +73,5 @@ class CurtainServicesTest {
 
 		// PASS : slide user's(id=failUserId) curtain(id=failCurtainId)
 		Assertions.assertNull(curtainServices.slideCurtainLevel(failCurtainId, level, failUserId));
-		// PASS : slide user's(id=failUserId) curtain(id=curtainId)
-		Assertions.assertNull(curtainServices.slideCurtainLevel(curtainId, level, failUserId));
-		// PASS : slide user's(id=userId) curtain(id=failCurtainId)
-		Assertions.assertNull(curtainServices.slideCurtainLevel(failCurtainId, level, userId));
 	}
 }
