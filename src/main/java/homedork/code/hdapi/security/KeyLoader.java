@@ -20,7 +20,7 @@ public class KeyLoader {
 		KeyStore keyStore = KeyStore.getInstance("JCEKS");
 
 		// load key store
-		String path = "C:\\Users\\ekane\\IdeaProjects\\hd-API\\NewKeyStore.jks";
+		String path = "/Users/willz/IdeaProjects/hd-API/NewKeyStore.jks";
 		char[] password = "changeit".toCharArray();
 
 		FileInputStream fileInputStream = new FileInputStream(path);

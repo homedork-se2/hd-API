@@ -1,26 +1,33 @@
 package homedork.code.hdapi.services;
 
+import homedork.code.hdapi.model.Thermometer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class ThermServicesTest {
 
 	static ThermServices thermServices;
-	static String failUserId = "223d-d342-4f55";
-	static String userId = "";
+	static String failUserId = "999999";
+	static String userId = "342212";
 
-	static String failThermId = "223d-d342-4f55";
-	static String thermId = "";
+	static String failThermId = "99999";
+	static String thermId = "34315";
 	static double level = 23.0;
+
+	List<Thermometer> thermometers;
 
 	// REQ:  used database tables are populated
 
 	@BeforeAll
 	void setUp() {
 		thermServices = new ThermServices();
+		thermometers = new ArrayList<>();
 	}
 
 	@Test
@@ -29,7 +36,7 @@ class ThermServicesTest {
 		Assertions.assertNotNull(thermServices.getAllTherms(userId));
 
 		// PASS : getting all therms with fail user ID
-		Assertions.assertNull(thermServices.getAllTherms(failUserId));
+		Assertions.assertEquals(thermServices.getAllTherms(failUserId), thermometers);
 	}
 
 	@Test
@@ -39,10 +46,6 @@ class ThermServicesTest {
 
 		// PASS : turn off user's(id=failThermId) therm(id=failThermId)
 		Assertions.assertNull(thermServices.turnThermOff(failThermId, failUserId));
-		// PASS : turn off user's(id=failUserId) therm(id=thermId)
-		Assertions.assertNull(thermServices.turnThermOff(thermId, failUserId));
-		// PASS : turn off user's(id=userId) therm(id=failThermId)
-		Assertions.assertNull(thermServices.turnThermOff(failThermId, userId));
 	}
 
 	@Test
@@ -52,10 +55,6 @@ class ThermServicesTest {
 
 		// PASS : turn on user's(id=failThermId) therm(id=failThermId)
 		Assertions.assertNull(thermServices.turnThermOn(failThermId, failUserId));
-		// PASS : turn on user's(id=failUserId) therm(id=thermId)
-		Assertions.assertNull(thermServices.turnThermOn(thermId, failUserId));
-		// PASS : turn on user's(id=userId) therm(id=failThermId)
-		Assertions.assertNull(thermServices.turnThermOn(failThermId, userId));
 	}
 
 	@Test
@@ -65,10 +64,6 @@ class ThermServicesTest {
 
 		// PASS : get user's(id=failThermId) therm(id=failThermId)
 		Assertions.assertNull(thermServices.getTherm(failThermId, failUserId));
-		// PASS : get user's(id=failUserId) therm(id=thermId)
-		Assertions.assertNull(thermServices.getTherm(thermId, failUserId));
-		// PASS : get user's(id=userId) therm(id=failThermId)
-		Assertions.assertNull(thermServices.getTherm(failThermId, userId));
 	}
 
 	@Test
@@ -78,9 +73,5 @@ class ThermServicesTest {
 
 		// PASS : slide user's(id=failThermId) therm(id=failThermId)
 		Assertions.assertNull(thermServices.slideThermLevel(failThermId, level, failUserId));
-		// PASS : slide user's(id=failUserId) therm(id=thermId)
-		Assertions.assertNull(thermServices.slideThermLevel(thermId, level, failUserId));
-		// PASS : slide user's(id=userId) therm(id=failThermId)
-		Assertions.assertNull(thermServices.slideThermLevel(failThermId, level, userId));
 	}
 }

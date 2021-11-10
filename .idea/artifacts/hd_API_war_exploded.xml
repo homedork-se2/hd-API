@@ -6,7 +6,6 @@
         <exploded>true</exploded>
         <module>hd-API</module>
         <packaging>war</packaging>
-        <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
     <root id="root">

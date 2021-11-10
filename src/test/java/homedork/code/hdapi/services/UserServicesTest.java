@@ -1,22 +1,30 @@
 package homedork.code.hdapi.services;
 
+import homedork.code.hdapi.model.Device;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class UserServicesTest {
 
 	static UserServices userServices;
-	static String failUserId = "223d-d342-4f55";
-	static String userId = "";
+	static String failUserId = "34221";
+	static String userId = "342212";
+
+	// empty devices list null list test
+	List<Device> devices;
 
 	// REQ:  used database tables are populated
 
 	@BeforeAll
 	void setup() {
 		userServices = new UserServices();
+		devices = new ArrayList<>();
 	}
 
 	@Test
@@ -34,6 +42,6 @@ class UserServicesTest {
 		Assertions.assertNotNull(userServices.getUserDevices(userId));
 
 		// PASS : get user's(id=failUserId) devices(all)
-		Assertions.assertNull(userServices.getUserDevices(failUserId));
+		Assertions.assertEquals(userServices.getUserDevices(failUserId), devices);
 	}
 }

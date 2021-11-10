@@ -17,27 +17,6 @@ public class QueryBuilder {
 
 	Client client = new Client();
 
-
-	// test : example
-	public Lamp turnUserLightOffTest(String userId, String deviceId) throws IOException {
-		String query = "UPDATE devices SET state='off' WHERE deviceId=" + "'" + deviceId + "' AND WHERE userId='" + userId + "';";
-		return (Lamp) jsonLampHandler(query);
-	}
-
-	// test : example
-	public List<Lamp> getLampsTest(String userId) throws IOException {
-		String query = "SELECT * from devices WHERE userId='" + userId + "' AND deviceType='LAMP';";
-		boolean b = client.sendQuery(query);
-
-		if(b) {
-			String jsonArray = client.getResponse(); // handle json object here - utility class?
-			if(jsonArray == null)
-				return null;
-			return JsonJavaParser.toLampObjects(jsonArray); // lamp java object returned!
-		}
-		return null;
-	}
-
 	// Generic Queries -------------------------------------------------------------------------------------------
 	private List<Device> jsonUserDevicesHandler(String query) throws IOException {
 		boolean b = client.sendQuery(query);
@@ -115,17 +94,17 @@ public class QueryBuilder {
 	}
 
 	public Lamp turnLampOff(String userId, String deviceId) throws IOException {
-		String query = String.format("UPDATE devices SET state='OFF', level=" + 0.0 + "WHERE id='%s';", deviceId);
+		String query = String.format("UPDATE devices SET state='OFF', level=" + 0.0 + " WHERE id='%s';", deviceId);
 		return jsonLampHandler(query);
 	}
 
 	public Lamp turnLampOn(String userId, String deviceId) throws IOException {
-		String query = String.format("UPDATE devices SET state='ON', level=" + 80.0 + "WHERE id='%s';", deviceId);
+		String query = String.format("UPDATE devices SET state='ON', level=" + 80.0 + " WHERE id='%s';", deviceId);
 		return jsonLampHandler(query);
 	}
 
 	public Lamp slideLampLevel(String userId, String deviceId, double level) throws IOException {
-		String query = String.format("UPDATE devices SET state='ON', level=" + level + "WHERE id='%s';", deviceId);
+		String query = String.format("UPDATE devices SET state='ON', level=" + level + " WHERE id='%s';", deviceId);
 		return jsonLampHandler(query);
 	}
 
@@ -161,17 +140,17 @@ public class QueryBuilder {
 	}
 
 	public Fan turnFanOn(String userId, String deviceId) throws IOException {
-		String query = String.format("UPDATE devices SET state='ON', level=" + 80.0 + "WHERE id='%s';", deviceId);
+		String query = String.format("UPDATE devices SET state='ON', level=" + 80.0 + " WHERE id='%s';", deviceId);
 		return jsonFanHandler(query);
 	}
 
 	public Fan turnFanOff(String userId, String deviceId) throws IOException {
-		String query = String.format("UPDATE devices SET state='OFF', level=" + 0.0 + "WHERE id='%s';", deviceId);
+		String query = String.format("UPDATE devices SET state='OFF', level=" + 0.0 + " WHERE id='%s';", deviceId);
 		return jsonFanHandler(query);
 	}
 
 	public Fan slideFanLevel(String userId, String deviceId, double level) throws IOException {
-		String query = String.format("UPDATE devices SET state='ON', level=" + level + "WHERE id='%s';", deviceId);
+		String query = String.format("UPDATE devices SET state='ON', level=" + level + " WHERE id='%s';", deviceId);
 		return jsonFanHandler(query);
 	}
 
@@ -207,17 +186,17 @@ public class QueryBuilder {
 	}
 
 	public Curtain turnCurtainOn(String userId, String deviceId) throws IOException {
-		String query = String.format("UPDATE devices SET state='ON', level=" + 80.0 + "WHERE id='%s';", deviceId);
+		String query = String.format("UPDATE devices SET state='ON', level=" + 80.0 + " WHERE id='%s';", deviceId);
 		return jsonCurtainHandler(query);
 	}
 
 	public Curtain turnCurtainOff(String userId, String deviceId) throws IOException {
-		String query = String.format("UPDATE devices SET state='OFF', level=" + 0.0 + "WHERE id='%s';", deviceId);
+		String query = String.format("UPDATE devices SET state='OFF', level=" + 0.0 + " WHERE id='%s';", deviceId);
 		return jsonCurtainHandler(query);
 	}
 
 	public Curtain slideCurtainLevel(String userId, String deviceId, double level) throws IOException {
-		String query = String.format("UPDATE devices SET state='ON', level=" + level + "WHERE id='%s';", deviceId);
+		String query = String.format("UPDATE devices SET state='ON', level=" + level + " WHERE id='%s';", deviceId);
 		return jsonCurtainHandler(query);
 	}
 
@@ -253,17 +232,17 @@ public class QueryBuilder {
 	}
 
 	public Thermometer setThermOn(String userId, String deviceId) throws IOException {
-		String query = String.format("UPDATE devices SET state='ON', level=" + 80.0 + "WHERE id='%s';", deviceId);
+		String query = String.format("UPDATE devices SET state='ON', level=" + 80.0 + " WHERE id='%s';", deviceId);
 		return jsonThermHandler(query);
 	}
 
 	public Thermometer turnThermOff(String userId, String deviceId) throws IOException {
-		String query = String.format("UPDATE devices SET state='OFF', level=" + 0.0 + "WHERE id='%s';", deviceId);
+		String query = String.format("UPDATE devices SET state='OFF', level=" + 0.0 + " WHERE id='%s';", deviceId);
 		return jsonThermHandler(query);
 	}
 
 	public Thermometer slideThermLevel(String userId, String deviceId, double level) throws IOException {
-		String query = String.format("UPDATE devices SET state='ON', level=" + level + "WHERE id='%s';", deviceId);
+		String query = String.format("UPDATE devices SET state='ON', level=" + level + " WHERE id='%s';", deviceId);
 		return jsonThermHandler(query);
 	}
 

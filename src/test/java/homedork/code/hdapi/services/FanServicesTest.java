@@ -1,26 +1,32 @@
 package homedork.code.hdapi.services;
 
+import homedork.code.hdapi.model.Fan;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class FanServicesTest {
 
 	static FanServices fanServices;
-	static String failUserId = "223d-d342-4f55";
-	static String userId = "";
+	static String failUserId = "999999";
+	static String userId = "342212";
 
-	static String failFanId = "223d-d342-4f55";
-	static String fanId = "";
+	static String failFanId = "99999";
+	static String fanId = "34314";
 	static double level = 23.0;
 
+	List<Fan> fans;
 	// REQ:  used database tables are populated
 
 	@BeforeAll
 	void setup() {
 		fanServices = new FanServices();
+		fans = new ArrayList<>();
 	}
 
 	@Test
@@ -29,7 +35,7 @@ class FanServicesTest {
 		Assertions.assertNotNull(fanServices.getAllFans(userId));
 
 		// PASS : getting all fans with fail user ID
-		Assertions.assertNull(fanServices.getAllFans(failUserId));
+		Assertions.assertEquals(fanServices.getAllFans(failUserId), fans);
 	}
 
 	@Test
@@ -39,10 +45,6 @@ class FanServicesTest {
 
 		// PASS : turn off user's(id=failUserId) fan(id=failFanId)
 		Assertions.assertNull(fanServices.turnFanOff(failFanId, failUserId));
-		// PASS : turn off user's(id=failUserId) fan(id=fanId)
-		Assertions.assertNull(fanServices.turnFanOff(fanId, failUserId));
-		// PASS : turn off user's(id=userId) fan(id=failFanId)
-		Assertions.assertNull(fanServices.turnFanOff(failFanId, userId));
 	}
 
 	@Test
@@ -52,10 +54,6 @@ class FanServicesTest {
 
 		// PASS : turn on user's(id=failUserId) fan(id=failFanId)
 		Assertions.assertNull(fanServices.turnFanOn(failFanId, failUserId));
-		// PASS : turn on user's(id=failUserId) fan(id=fanId)
-		Assertions.assertNull(fanServices.turnFanOn(fanId, failUserId));
-		// PASS : turn on user's(id=userId) fan(id=failFanId)
-		Assertions.assertNull(fanServices.turnFanOn(failFanId, userId));
 	}
 
 	@Test
@@ -65,10 +63,6 @@ class FanServicesTest {
 
 		// PASS : get user's(id=fakeUserId) fan(id=fakeFanId)
 		Assertions.assertNull(fanServices.getFan(failFanId, failUserId));
-		// PASS : get user's(id=fakeUserId) fan(id=fanId)
-		Assertions.assertNull(fanServices.getFan(fanId, failUserId));
-		// PASS : get user's(id=userId) fan(id=fakeFanId)
-		Assertions.assertNull(fanServices.getFan(failFanId, userId));
 	}
 
 	@Test
@@ -78,9 +72,5 @@ class FanServicesTest {
 
 		// PASS : slide user's(id=fakeUserId) fan(id=fakeFanId)
 		Assertions.assertNull(fanServices.slideFanLevel(failFanId, level, failUserId));
-		// PASS : slide user's(id=fakeUserId) fan(id=fanId)
-		Assertions.assertNull(fanServices.slideFanLevel(fanId, level, failUserId));
-		// PASS : slide user's(id=userId) fan(id=fakeFanId)
-		Assertions.assertNull(fanServices.slideFanLevel(failFanId, level, userId));
 	}
 }
