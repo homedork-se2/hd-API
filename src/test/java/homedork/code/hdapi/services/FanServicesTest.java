@@ -14,7 +14,7 @@ class FanServicesTest {
 
 	static FanServices fanServices;
 	static String failUserId = "999999";
-	static String userId = "342212";
+	static String userId = "7IT6aTO2cThiDAOpHshvX9e8z9t1";
 
 	static String failFanId = "99999";
 	static String fanId = "34314";
