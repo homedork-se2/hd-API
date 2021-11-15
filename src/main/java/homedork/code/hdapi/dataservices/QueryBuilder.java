@@ -246,6 +246,20 @@ public class QueryBuilder {
 		return jsonThermHandler(query);
 	}
 
+	public String getFreePin(String userId, String deviceType) {
+		String contactor = String.format("FREE-PIN %s %s",userId, deviceType);
+		boolean b = client.sendQuery(contactor);
+
+		try {
+			if(b) {
+				return client.getResponse();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 	// MP3 Queries ------------------------------------------------------------------------------------------
 
 }

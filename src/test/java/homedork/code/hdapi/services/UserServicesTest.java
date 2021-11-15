@@ -14,9 +14,9 @@ class UserServicesTest {
 
 	static UserServices userServices;
 	static String failUserId = "34221";
-	static String userId = "342212";
+	static String userId = "7IT6aTO2cThiDAOpHshvX9e8z9t1";
 
-	// empty devices list null list test
+	// empty devices list for null list test
 	List<Device> devices;
 
 	// REQ:  used database tables are populated

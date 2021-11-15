@@ -14,7 +14,7 @@ class LampServicesTest {
 
 	static LampServices lampServices;
 	static String failUserId = "999999";
-	static String userId = "342212";
+	static String userId = "7IT6aTO2cThiDAOpHshvX9e8z9t1";
 
 	static String failLampId = "99999";
 	static String lampId = "34312";
@@ -28,6 +28,15 @@ class LampServicesTest {
 	void setup() {
 		lampServices = new LampServices();
 		lamps = new ArrayList<>();
+	}
+
+	@Test
+	void getLamp() {
+		// PASS : get user's(id=userId) lamp(id=LampId)
+		Assertions.assertNotNull(lampServices.getLamp(lampId, userId));
+
+		// PASS : get user's(id=failUserId) lamp(id=failLampId)
+		Assertions.assertNull(lampServices.getLamp(failLampId, failUserId));
 	}
 
 	@Test
@@ -57,14 +66,7 @@ class LampServicesTest {
 		Assertions.assertNull(lampServices.turnLampOn(failLampId, failUserId));
 	}
 
-	@Test
-	void getLamp() {
-		// PASS : get user's(id=userId) lamp(id=LampId)
-		Assertions.assertNotNull(lampServices.getLamp(lampId, userId));
 
-		// PASS : get user's(id=failUserId) lamp(id=failLampId)
-		Assertions.assertNull(lampServices.getLamp(failLampId, failUserId));
-	}
 
 	@Test
 	void slideLampLevel() {
