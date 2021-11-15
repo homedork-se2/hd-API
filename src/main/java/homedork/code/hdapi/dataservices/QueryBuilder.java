@@ -63,6 +63,20 @@ public class QueryBuilder {
         return jsonUserHandler(q);
     }
 
+    public String getFreePin(String userId, String deviceType) {
+        String contactor = String.format("FREE-PIN %s %s",userId, deviceType);
+        boolean b = client.sendQuery(contactor);
+
+        try {
+            if(b) {
+                return client.getResponse();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     // Generic methods need to be tested
     @SuppressWarnings("unchecked")
     private <T> T jsonGenericHandler(String query) throws IOException {
