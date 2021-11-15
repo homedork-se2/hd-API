@@ -62,6 +62,75 @@ public class QueryBuilder {
 		return jsonUserHandler(q);
 	}
 
+	// Generic methods need to be tested
+	private <T> T jsonGenericHandler(String query) throws IOException {
+		boolean b = client.sendQuery(query);
+
+		if(b) {
+			String jsonObject = client.getResponse();
+			if(jsonObject == null)
+				return null;
+			if(jsonObject.contains("LAMP"))
+				return (T) JsonJavaParser.toLampObject(jsonObject);
+			else if(jsonObject.contains("FAN"))
+				return (T) JsonJavaParser.toFanObject(jsonObject);
+			else if(jsonObject.contains("CURTAIN"))
+				return (T) JsonJavaParser.toCurtainObject(jsonObject);
+			else if(jsonObject.contains("THERM"))
+				return (T) JsonJavaParser.toThermObject(jsonObject);
+			else if(jsonObject.contains("ALARM"))
+				return (T) JsonJavaParser.toAlarmObject(jsonObject);
+			else if(jsonObject.contains("WINDOW"))
+				return (T) JsonJavaParser.toWindowObject(jsonObject);
+		}
+		return null;
+	}
+
+	public <T> T getGenericDevice(String deviceId) throws IOException {
+		String query = String.format("SELECT * from devices WHERE id='%s';", deviceId);
+		return jsonGenericHandler(query);
+	}
+
+	public <T> List<T> getAllDevicesGeneric(String userId, DeviceType type) throws IOException {
+		String query = String.format("SELECT * from devices WHERE user_id='%s' AND type='%s';", userId, type);
+		boolean b = client.sendQuery(query);
+
+		if(b) {
+			String jsonObject = client.getResponse();
+			if(jsonObject == null)
+				return null;
+			if(jsonObject.contains("LAMP"))
+				return (List<T>) JsonJavaParser.toLampObjects(jsonObject);
+			else if(jsonObject.contains("FAN"))
+				return (List<T>) JsonJavaParser.toFanObjects(jsonObject);
+			else if(jsonObject.contains("CURTAIN"))
+				return (List<T>) JsonJavaParser.toCurtainObjects(jsonObject);
+			else if(jsonObject.contains("THERM"))
+				return (List<T>) JsonJavaParser.toThermObjects(jsonObject);
+			else if(jsonObject.contains("ALARM"))
+				return (List<T>) JsonJavaParser.toAlarmObjects(jsonObject);
+			else if(jsonObject.contains("WINDOW"))
+				return (List<T>) JsonJavaParser.toWindowObjects(jsonObject);
+		}
+		return null;
+	}
+
+	public <T> T turnDeviceOffGeneric(String deviceId) throws IOException {
+		String query = String.format("UPDATE devices SET state='OFF', level=" + 0.0 + " WHERE id='%s';", deviceId);
+		return (T) jsonLampHandler(query);
+	}
+
+	public <T> T turnDeviceOnGeneric(String deviceId) throws IOException {
+		String query = String.format("UPDATE devices SET state='ON', level=" + 80.0 + " WHERE id='%s';", deviceId);
+		return (T) jsonLampHandler(query);
+	}
+
+	public <T> T deviceSlideLevelGeneric(double level, String deviceId) throws IOException {
+		String query = String.format("UPDATE devices SET state='ON', level=" + level + " WHERE id='%s';", deviceId);
+		return (T) jsonLampHandler(query);
+	}
+
+
 	//  Lamp Queries ------------------------------------------------------------------------------------------
 	private Lamp jsonLampHandler(String query) throws IOException {
 		boolean b = client.sendQuery(query);

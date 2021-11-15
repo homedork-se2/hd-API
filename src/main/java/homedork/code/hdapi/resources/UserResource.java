@@ -92,4 +92,22 @@ public class UserResource {
 	public LampResource getLampResource() {
 		return new LampResource();
 	}
+
+	/**
+	 * @return - Alarm resource object
+	 */
+	@Path("/{userId}/alarms")
+	public AlarmResource getAlarmResource() {
+		return new AlarmResource();
+	}
+
+	/**
+	 * @return - Window resource object
+	 */
+	@Path("/{userId}/windows")
+	public WindowResource getWindowResource() {
+		return new WindowResource();
+	}
+
+
 }

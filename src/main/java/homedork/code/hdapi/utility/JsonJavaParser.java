@@ -30,6 +30,16 @@ public class JsonJavaParser {
 		return gson.fromJson(json, Thermometer.class);
 	}
 
+	public static Alarm toAlarmObject(String json) {
+		Gson gson = new Gson();
+		return gson.fromJson(json, Alarm.class);
+	}
+
+	public static Window toWindowObject(String json) {
+		Gson gson = new Gson();
+		return gson.fromJson(json, Window.class);
+	}
+
 	public static User toUserObject(String json) {
 		Gson gson = new Gson();
 		return gson.fromJson(json, User.class);
@@ -81,6 +91,30 @@ public class JsonJavaParser {
 			therms.add(thermObject);
 		}
 		return therms;
+	}
+
+	public static List<Alarm> toAlarmObjects(String json) {
+		Gson gson = new Gson();
+		List<Alarm> alarms = new ArrayList<>();
+		JSONArray jsonArray = new JSONArray(json);
+		for(int i = 0; i < jsonArray.toList().size(); i++) {
+			JSONObject jsonAlarmObject = (JSONObject) jsonArray.get(i);
+			Alarm alarmObject = gson.fromJson(jsonAlarmObject.toString(), Alarm.class);
+			alarms.add(alarmObject);
+		}
+		return alarms;
+	}
+
+	public static List<Window> toWindowObjects(String json) {
+		Gson gson = new Gson();
+		List<Window> windows = new ArrayList<>();
+		JSONArray jsonArray = new JSONArray(json);
+		for(int i = 0; i < jsonArray.toList().size(); i++) {
+			JSONObject jsonWindowObject = (JSONObject) jsonArray.get(i);
+			Window windowObject = gson.fromJson(jsonWindowObject.toString(), Window.class);
+			windows.add(windowObject);
+		}
+		return windows;
 	}
 
 	public static List<Device> toDeviceObjects(String json) {
