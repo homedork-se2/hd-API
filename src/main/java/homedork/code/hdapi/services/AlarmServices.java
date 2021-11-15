@@ -22,7 +22,7 @@ public class AlarmServices {
 
     public Alarm turnAlarmOff(String alarmId) {
         try {
-            return queryBuilder.turnDeviceOffGeneric(alarmId);
+            return queryBuilder.turnDeviceOffGeneric(alarmId, DeviceType.ALARM);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -31,7 +31,7 @@ public class AlarmServices {
 
     public Alarm turnAlarmOn(String alarmId) {
         try {
-            return queryBuilder.turnDeviceOnGeneric(alarmId);
+            return queryBuilder.turnDeviceOnGeneric(alarmId, DeviceType.ALARM);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -49,7 +49,7 @@ public class AlarmServices {
 
     public Alarm slideAlarmLevel(String alarmId, double value) {
         try {
-            return queryBuilder.deviceSlideLevelGeneric(value, alarmId);
+            return queryBuilder.deviceSlideLevelGeneric(value, alarmId, DeviceType.ALARM);
         } catch (IOException e) {
             e.printStackTrace();
         }
