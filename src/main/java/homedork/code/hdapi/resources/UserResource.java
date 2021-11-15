@@ -46,6 +46,29 @@ public class UserResource {
 	}
 
 	/**
+	 * On user click button to add new device,
+	 * deviceType is selected and pointed to this API.
+	 * Next free pin slot is sent back as a TEXT_PLAIN response.
+	 *
+	 * <p>
+	 * New device added in database.
+	 * </p>
+	 *
+	 * @param userId     - user ID
+	 * @param deviceType - DeviceType selected by user
+	 * @return - String of pin slot to plug new device.
+	 */
+	@POST
+	@Path("/{userId}/new-device/{deviceType}/")
+	@Produces(MediaType.TEXT_PLAIN)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public String getPinSlot(@PathParam("userId") String userId, @PathParam("deviceType") String deviceType) {
+		System.out.println("NEW DEVICE POSTED");
+		System.out.println("GET USER'S FREE PIN AND RETURN");
+		return userServices.getPinSLot(userId, deviceType);
+	}
+
+	/**
 	 * @return added user object
 	 */
 	@POST

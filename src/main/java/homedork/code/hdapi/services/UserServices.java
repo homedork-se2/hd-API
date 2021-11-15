@@ -36,4 +36,13 @@ public class UserServices {
 		}
 		return null;
 	}
+
+	public String getPinSLot(String userId, String deviceType) {
+		try {
+			return queryBuilder.getFreePin(userId, deviceType);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

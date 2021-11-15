@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class QueryBuilder {
+  
     /**
      * Devices table for all devices[floorLamp,ceilingLamp,fan] - nullables for type don't share a particular attribute.
      * basically devices table is always updated/read through here, alongside users table for user based edits,
