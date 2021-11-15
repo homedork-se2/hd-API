@@ -22,7 +22,7 @@ public class WindowResource {
     @Path("/{windowId}/turnOff")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Window turnCurtainOff(@PathParam("windowId") String windowId, @PathParam("userId") String userId) {
+    public Window turnWindowOff(@PathParam("windowId") String windowId, @PathParam("userId") String userId) {
         return windowServices.turnWindowOff(windowId);
     }
 
@@ -30,7 +30,7 @@ public class WindowResource {
     @Path("/{windowId}/turnOn")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Window turnCurtainOn(@PathParam("windowId") String windowId, @PathParam("userId") String userId) {
+    public Window turnWindowOn(@PathParam("windowId") String windowId, @PathParam("userId") String userId) {
         return windowServices.turnWindowOn(windowId);
     }
 
@@ -38,7 +38,7 @@ public class WindowResource {
     @Path("/{windowId}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Window getCurtain(@PathParam("windowId") String windowId, @PathParam("userId") String userId) {
+    public Window getWindow(@PathParam("windowId") String windowId, @PathParam("userId") String userId) {
         return windowServices.getWindow(windowId);
     }
 
@@ -46,7 +46,7 @@ public class WindowResource {
     @Path("/{windowId}/adjust/{value}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Window slideCurtainValue(@PathParam("windowId") String windowId, @PathParam("value") double value, @PathParam("userId") String userId) {
+    public Window slideWindowValue(@PathParam("windowId") String windowId, @PathParam("value") double value, @PathParam("userId") String userId) {
         return windowServices.slideWindowLevel(windowId, value);
     }
 }

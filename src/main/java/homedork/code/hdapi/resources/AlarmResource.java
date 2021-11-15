@@ -22,7 +22,7 @@ public class AlarmResource {
     @Path("/{alarmId}/turnOff")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Alarm turnCurtainOff(@PathParam("alarmId") String alarmId, @PathParam("userId") String userId) {
+    public Alarm turnAlarmOff(@PathParam("alarmId") String alarmId, @PathParam("userId") String userId) {
         return alarmServices.turnAlarmOff(alarmId);
     }
 
@@ -30,7 +30,7 @@ public class AlarmResource {
     @Path("/{alarmId}/turnOn")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Alarm turnCurtainOn(@PathParam("alarmId") String alarmId, @PathParam("userId") String userId) {
+    public Alarm turnAlarmOn(@PathParam("alarmId") String alarmId, @PathParam("userId") String userId) {
         return alarmServices.turnAlarmOn(alarmId);
     }
 
@@ -38,7 +38,7 @@ public class AlarmResource {
     @Path("/{alarmId}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Alarm getCurtain(@PathParam("alarmId") String alarmId, @PathParam("userId") String userId) {
+    public Alarm getAlarm(@PathParam("alarmId") String alarmId, @PathParam("userId") String userId) {
         return alarmServices.getAlarm(alarmId);
     }
 
@@ -46,7 +46,7 @@ public class AlarmResource {
     @Path("/{alarmId}/adjust/{value}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Alarm slideCurtainValue(@PathParam("alarmId") String alarmId, @PathParam("value") double value, @PathParam("userId") String userId) {
+    public Alarm slideAlarmValue(@PathParam("alarmId") String alarmId, @PathParam("value") double value, @PathParam("userId") String userId) {
         return alarmServices.slideAlarmLevel(alarmId, value);
     }
 }
