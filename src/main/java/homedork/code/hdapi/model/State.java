@@ -1,5 +1,5 @@
 package homedork.code.hdapi.model;
 
 public enum State {
-	OFF, ON
+	OFF, ON, OPEN, CLOSED
 }
