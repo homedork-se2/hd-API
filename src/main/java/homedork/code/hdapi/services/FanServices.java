@@ -1,6 +1,7 @@
 package homedork.code.hdapi.services;
 
 import homedork.code.hdapi.dataservices.QueryBuilder;
+import homedork.code.hdapi.model.DeviceType;
 import homedork.code.hdapi.model.Fan;
 
 import java.io.IOException;
@@ -12,43 +13,43 @@ public class FanServices {
 
 	public List<Fan> getAllFans(String userId) {
 		try {
-			return queryBuilder.getFans(userId);
+			return queryBuilder.getAllDevicesGeneric(userId, DeviceType.FAN);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
 
-	public Fan turnFanOff(String fanId, String userId) {
+	public Fan turnFanOff(String fanId) {
 		try {
-			return queryBuilder.turnFanOff(userId, fanId);
+			return queryBuilder.turnDeviceOffGeneric(fanId, DeviceType.FAN);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
 
-	public Fan turnFanOn(String fanId, String userId) {
+	public Fan turnFanOn(String fanId) {
 		try {
-			return queryBuilder.turnFanOn(userId, fanId);
+			return queryBuilder.turnDeviceOnGeneric(fanId, DeviceType.FAN);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
 
-	public Fan getFan(String fanId, String userId) {
+	public Fan getFan(String fanId) {
 		try {
-			return queryBuilder.getFan(userId, fanId);
+			return queryBuilder.getGenericDevice(fanId);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
 
-	public Fan slideFanLevel(String fanId, double value, String userId) {
+	public Fan slideFanLevel(String fanId, double value) {
 		try {
-			return queryBuilder.slideFanLevel(userId, fanId, value);
+			return queryBuilder.deviceSlideLevelGeneric(value, fanId, DeviceType.FAN);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

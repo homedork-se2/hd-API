@@ -23,7 +23,7 @@ public class FanResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Fan turnFanOff(@PathParam("fanId") String fanId, @PathParam("userId") String userId) {
-		return fanServices.turnFanOff(fanId, userId);
+		return fanServices.turnFanOff(fanId);
 	}
 
 	@PUT
@@ -31,7 +31,7 @@ public class FanResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Fan turnFanOn(@PathParam("fanId") String fanId, @PathParam("userId") String userId) {
-		return fanServices.turnFanOn(fanId, userId);
+		return fanServices.turnFanOn(fanId);
 	}
 
 	@GET
@@ -39,7 +39,7 @@ public class FanResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Fan getFan(@PathParam("fanId") String fanId, @PathParam("userId") String userId) {
-		return fanServices.getFan(fanId, userId);
+		return fanServices.getFan(fanId);
 	}
 
 	@PUT
@@ -47,7 +47,7 @@ public class FanResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Fan slideFanValue(@PathParam("fanId") String fanId, @PathParam("value") double value, @PathParam("userId") String userId) {
-		return fanServices.slideFanLevel(fanId, value, userId);
+		return fanServices.slideFanLevel(fanId, value);
 	}
 
 

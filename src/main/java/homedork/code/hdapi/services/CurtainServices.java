@@ -2,6 +2,7 @@ package homedork.code.hdapi.services;
 
 import homedork.code.hdapi.dataservices.QueryBuilder;
 import homedork.code.hdapi.model.Curtain;
+import homedork.code.hdapi.model.DeviceType;
 
 import java.io.IOException;
 import java.util.List;
@@ -12,43 +13,43 @@ public class CurtainServices {
 
     public List<Curtain> getAllCurtains(String userId) {
         try {
-            return queryBuilder.getCurtains(userId);
+            return queryBuilder.getAllDevicesGeneric(userId, DeviceType.CURTAIN);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    public Curtain turnCurtainOff(String curtainId, String userId) {
+    public Curtain turnCurtainOff(String curtainId) {
         try {
-            return queryBuilder.turnCurtainOff(userId, curtainId);
+            return queryBuilder.turnDeviceOffGeneric(curtainId, DeviceType.CURTAIN);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    public Curtain turnCurtainOn(String curtainId, String userId) {
+    public Curtain turnCurtainOn(String curtainId) {
         try {
-            return queryBuilder.turnCurtainOn(userId, curtainId);
+            return queryBuilder.turnDeviceOnGeneric(curtainId, DeviceType.CURTAIN);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    public Curtain getCurtain(String curtainId, String userId) {
+    public Curtain getCurtain(String curtainId) {
         try {
-            return queryBuilder.getCurtain(userId, curtainId);
+            return queryBuilder.getGenericDevice(curtainId);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    public Curtain slideCurtainLevel(String curtainId, double value, String userId) {
+    public Curtain slideCurtainLevel(String curtainId, double value) {
         try {
-            return queryBuilder.slideCurtainLevel(userId, curtainId, value);
+            return queryBuilder.deviceSlideLevelGeneric(value, curtainId, DeviceType.CURTAIN);
         } catch (IOException e) {
             e.printStackTrace();
         }

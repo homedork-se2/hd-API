@@ -11,6 +11,14 @@
   <component name="ChangeListManager">
     <list default="true" id="e161120b-1dc8-45be-9def-572ea53de1ee" name="Changes" comment="JUNIT TEST MODIFICATIONS - (ALL PASS)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/CurtainResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/CurtainResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/FanResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/FanResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/LampResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/LampResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/CurtainServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/CurtainServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/FanServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/FanServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/LampServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/LampServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/CurtainServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/CurtainServicesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/FanServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/FanServicesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
