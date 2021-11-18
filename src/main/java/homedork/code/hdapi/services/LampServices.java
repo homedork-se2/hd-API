@@ -13,7 +13,7 @@ public class LampServices {
 
 	public List<Lamp> getAllLamps(String userId) {
 		try {
-			return queryBuilder.getLamps(userId);
+			return queryBuilder.getAllDevicesGeneric(userId, DeviceType.LAMP);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
