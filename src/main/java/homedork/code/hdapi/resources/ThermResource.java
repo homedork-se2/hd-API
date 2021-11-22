@@ -23,7 +23,7 @@ public class ThermResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Thermometer turnThermOff(@PathParam("thermId") String thermId, @PathParam("userId") String userId) {
-		return thermServices.turnThermOff(thermId, userId);
+		return thermServices.turnThermOff(thermId);
 	}
 
 	@PUT
@@ -31,7 +31,7 @@ public class ThermResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Thermometer turnThermOn(@PathParam("thermId") String thermId, @PathParam("userId") String userId) {
-		return thermServices.turnThermOn(thermId, userId);
+		return thermServices.turnThermOn(thermId);
 	}
 
 	@GET
@@ -39,7 +39,7 @@ public class ThermResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Thermometer getTherm(@PathParam("thermId") String thermId, @PathParam("userId") String userId) {
-		return thermServices.getTherm(thermId, userId);
+		return thermServices.getTherm(thermId);
 	}
 
 	@PUT
@@ -47,7 +47,7 @@ public class ThermResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Thermometer slideThermValue(@PathParam("thermId") String thermId, @PathParam("value") double value, @PathParam("userId") String userId) {
-		return thermServices.slideThermLevel(thermId, value, userId);
+		return thermServices.slideThermLevel(thermId, value);
 	}
 
 }

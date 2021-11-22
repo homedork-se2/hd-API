@@ -41,36 +41,36 @@ class FanServicesTest {
 	@Test
 	void turnFanOff() {
 		// PASS : turn off user's(id=userId) fan(id=fanId)
-		Assertions.assertNotNull(fanServices.turnFanOff(fanId, userId));
+		Assertions.assertNotNull(fanServices.turnFanOff(fanId));
 
 		// PASS : turn off user's(id=failUserId) fan(id=failFanId)
-		Assertions.assertNull(fanServices.turnFanOff(failFanId, failUserId));
+		Assertions.assertNull(fanServices.turnFanOff(failFanId));
 	}
 
 	@Test
 	void turnFanOn() {
 		// PASS : turn on user's(id=userId) fan(id=fanId)
-		Assertions.assertNotNull(fanServices.turnFanOn(fanId, userId));
+		Assertions.assertNotNull(fanServices.turnFanOn(fanId));
 
 		// PASS : turn on user's(id=failUserId) fan(id=failFanId)
-		Assertions.assertNull(fanServices.turnFanOn(failFanId, failUserId));
+		Assertions.assertNull(fanServices.turnFanOn(failFanId));
 	}
 
 	@Test
 	void getFan() {
 		// PASS : get user's(id=userId) fan(id=fanId)
-		Assertions.assertNotNull(fanServices.getFan(fanId, userId));
+		Assertions.assertNotNull(fanServices.getFan(fanId));
 
 		// PASS : get user's(id=fakeUserId) fan(id=fakeFanId)
-		Assertions.assertNull(fanServices.getFan(failFanId, failUserId));
+		Assertions.assertNull(fanServices.getFan(failFanId));
 	}
 
 	@Test
 	void slideFanLevel() {
 		// PASS : slide user's(id=userId) fan(id=fanId)
-		Assertions.assertNotNull(fanServices.slideFanLevel(fanId, level, userId));
+		Assertions.assertNotNull(fanServices.slideFanLevel(fanId, level));
 
 		// PASS : slide user's(id=fakeUserId) fan(id=fakeFanId)
-		Assertions.assertNull(fanServices.slideFanLevel(failFanId, level, failUserId));
+		Assertions.assertNull(fanServices.slideFanLevel(failFanId, level));
 	}
 }

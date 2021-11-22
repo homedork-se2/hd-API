@@ -1,6 +1,7 @@
 package homedork.code.hdapi.services;
 
 import homedork.code.hdapi.dataservices.QueryBuilder;
+import homedork.code.hdapi.model.DeviceType;
 import homedork.code.hdapi.model.Thermometer;
 
 import java.io.IOException;
@@ -12,43 +13,43 @@ public class ThermServices {
 
     public List<Thermometer> getAllTherms(String userId) {
         try {
-            return queryBuilder.getTherms(userId);
+            return queryBuilder.getAllDevicesGeneric(userId, DeviceType.THERM);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    public Thermometer turnThermOff(String thermId, String userId) {
+    public Thermometer turnThermOff(String thermId) {
         try {
-            return queryBuilder.turnThermOff(userId, thermId);
+            return queryBuilder.turnDeviceOffGeneric(thermId, DeviceType.THERM);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    public Thermometer turnThermOn(String thermId, String userId) {
+    public Thermometer turnThermOn(String thermId) {
         try {
-            return queryBuilder.setThermOn(userId, thermId);
+            return queryBuilder.turnDeviceOnGeneric(thermId, DeviceType.THERM);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    public Thermometer getTherm(String thermId, String userId) {
+    public Thermometer getTherm(String thermId) {
         try {
-            return queryBuilder.getTherm(userId, thermId);
+            return queryBuilder.getGenericDevice(thermId);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    public Thermometer slideThermLevel(String thermId, double value, String userId) {
+    public Thermometer slideThermLevel(String thermId, double value) {
         try {
-            return queryBuilder.slideThermLevel(userId, thermId, value);
+            return queryBuilder.deviceSlideLevelGeneric(value, thermId, DeviceType.THERM);
         } catch (IOException e) {
             e.printStackTrace();
         }

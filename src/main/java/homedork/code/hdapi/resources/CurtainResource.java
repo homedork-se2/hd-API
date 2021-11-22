@@ -23,7 +23,7 @@ public class CurtainResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Curtain turnCurtainOff(@PathParam("curtainId") String curtainId, @PathParam("userId") String userId) {
-		return curtainServices.turnCurtainOff(curtainId, userId);
+		return curtainServices.turnCurtainOff(curtainId);
 	}
 
 	@PUT
@@ -31,7 +31,7 @@ public class CurtainResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Curtain turnCurtainOn(@PathParam("curtainId") String curtainId, @PathParam("userId") String userId) {
-		return curtainServices.turnCurtainOn(curtainId, userId);
+		return curtainServices.turnCurtainOn(curtainId);
 	}
 
 	@GET
@@ -39,7 +39,7 @@ public class CurtainResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Curtain getCurtain(@PathParam("curtainId") String curtainId, @PathParam("userId") String userId) {
-		return curtainServices.getCurtain(curtainId, userId);
+		return curtainServices.getCurtain(curtainId);
 	}
 
 	@PUT
@@ -47,6 +47,6 @@ public class CurtainResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Curtain slideCurtainValue(@PathParam("curtainId") String curtainId, @PathParam("value") double value, @PathParam("userId") String userId) {
-		return curtainServices.slideCurtainLevel(curtainId, value, userId);
+		return curtainServices.slideCurtainLevel(curtainId, value);
 	}
 }

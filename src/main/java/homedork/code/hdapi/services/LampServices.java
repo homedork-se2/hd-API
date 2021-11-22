@@ -1,6 +1,7 @@
 package homedork.code.hdapi.services;
 
 import homedork.code.hdapi.dataservices.QueryBuilder;
+import homedork.code.hdapi.model.DeviceType;
 import homedork.code.hdapi.model.Lamp;
 
 import java.io.IOException;
@@ -12,43 +13,43 @@ public class LampServices {
 
 	public List<Lamp> getAllLamps(String userId) {
 		try {
-			return queryBuilder.getLamps(userId);
+			return queryBuilder.getAllDevicesGeneric(userId, DeviceType.LAMP);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
 
-	public Lamp turnLampOff(String lampId, String userId) {
+	public Lamp turnLampOff(String lampId) {
 		try {
-			 return queryBuilder.turnLampOff(userId, lampId);
+			 return queryBuilder.turnDeviceOffGeneric(lampId, DeviceType.LAMP);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
 
-	public Lamp turnLampOn(String lampId, String userId) {
+	public Lamp turnLampOn(String lampId) {
 		try {
-			return queryBuilder.turnLampOn(userId, lampId);
+			return queryBuilder.turnDeviceOnGeneric(lampId, DeviceType.LAMP);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
 
-	public Lamp getLamp(String lampId, String userId) {
+	public Lamp getLamp(String lampId) {
 		try {
-			return queryBuilder.getLamp(userId, lampId);
+			return queryBuilder.getGenericDevice(lampId);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
 
-	public Lamp slideLampLevel(String lampId, double value, String userId) {
+	public Lamp slideLampLevel(String lampId, double value) {
 		try {
-			return queryBuilder.slideLampLevel(userId, lampId, value);
+			return queryBuilder.deviceSlideLevelGeneric(value, lampId, DeviceType.LAMP);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

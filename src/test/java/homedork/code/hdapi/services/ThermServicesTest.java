@@ -42,36 +42,36 @@ class ThermServicesTest {
 	@Test
 	void turnThermOff() {
 		// PASS : turn off user's(id=userId) therm(id=thermId)
-		Assertions.assertNotNull(thermServices.turnThermOff(thermId, userId));
+		Assertions.assertNotNull(thermServices.turnThermOff(thermId));
 
 		// PASS : turn off user's(id=failThermId) therm(id=failThermId)
-		Assertions.assertNull(thermServices.turnThermOff(failThermId, failUserId));
+		Assertions.assertNull(thermServices.turnThermOff(failThermId));
 	}
 
 	@Test
 	void turnThermOn() {
 		// PASS : turn on user's(id=userId) therm(id=thermId)
-		Assertions.assertNotNull(thermServices.turnThermOn(thermId, userId));
+		Assertions.assertNotNull(thermServices.turnThermOn(thermId));
 
 		// PASS : turn on user's(id=failThermId) therm(id=failThermId)
-		Assertions.assertNull(thermServices.turnThermOn(failThermId, failUserId));
+		Assertions.assertNull(thermServices.turnThermOn(failThermId));
 	}
 
 	@Test
 	void getTherm() {
 		// PASS : get user's(id=userId) therm(id=thermId)
-		Assertions.assertNotNull(thermServices.getTherm(thermId, userId));
+		Assertions.assertNotNull(thermServices.getTherm(thermId));
 
 		// PASS : get user's(id=failThermId) therm(id=failThermId)
-		Assertions.assertNull(thermServices.getTherm(failThermId, failUserId));
+		Assertions.assertNull(thermServices.getTherm(failThermId));
 	}
 
 	@Test
 	void slideThermLevel() {
 		// PASS : slide user's(id=userId) therm(id=thermId)
-		Assertions.assertNotNull(thermServices.slideThermLevel(thermId, level, userId));
+		Assertions.assertNotNull(thermServices.slideThermLevel(thermId, level));
 
 		// PASS : slide user's(id=failThermId) therm(id=failThermId)
-		Assertions.assertNull(thermServices.slideThermLevel(failThermId, level, failUserId));
+		Assertions.assertNull(thermServices.slideThermLevel(failThermId, level));
 	}
 }

@@ -33,10 +33,10 @@ class LampServicesTest {
 	@Test
 	void getLamp() {
 		// PASS : get user's(id=userId) lamp(id=LampId)
-		Assertions.assertNotNull(lampServices.getLamp(lampId, userId));
+		Assertions.assertNotNull(lampServices.getLamp(lampId));
 
 		// PASS : get user's(id=failUserId) lamp(id=failLampId)
-		Assertions.assertNull(lampServices.getLamp(failLampId, failUserId));
+		Assertions.assertNull(lampServices.getLamp(failLampId));
 	}
 
 	@Test
@@ -51,19 +51,19 @@ class LampServicesTest {
 	@Test
 	void turnLampOff() {
 		// PASS : turn off user's(id=userId) lamp(id=LampId)
-		Assertions.assertNotNull(lampServices.turnLampOff(lampId, userId));
+		Assertions.assertNotNull(lampServices.turnLampOff(lampId));
 
 		// PASS : turn off user's(id=failUserId) lamp(id=failLampId)
-		Assertions.assertNull(lampServices.turnLampOff(failLampId, failUserId));
+		Assertions.assertNull(lampServices.turnLampOff(failLampId));
 	}
 
 	@Test
 	void turnLampOn() {
 		// PASS : turn off user's(id=userId) lamp(id=LampId)
-		Assertions.assertNotNull(lampServices.turnLampOn(lampId, userId));
+		Assertions.assertNotNull(lampServices.turnLampOn(lampId));
 
 		// PASS : turn on user's(id=failUserId) lamp(id=failLampId)
-		Assertions.assertNull(lampServices.turnLampOn(failLampId, failUserId));
+		Assertions.assertNull(lampServices.turnLampOn(failLampId));
 	}
 
 
@@ -71,9 +71,9 @@ class LampServicesTest {
 	@Test
 	void slideLampLevel() {
 		// PASS : slide user's(id=userId) lamp(id=LampId)
-		Assertions.assertNotNull(lampServices.slideLampLevel(lampId, level, userId));
+		Assertions.assertNotNull(lampServices.slideLampLevel(lampId, level));
 
 		// PASS : slide user's(id=failUserId) lamp(id=failLampId)
-		Assertions.assertNull(lampServices.slideLampLevel(failLampId, level, failUserId));
+		Assertions.assertNull(lampServices.slideLampLevel(failLampId, level));
 	}
 }

@@ -42,36 +42,36 @@ class CurtainServicesTest {
 	@Test
 	void turnCurtainOff() {
 		// PASS : turn off user's(id=userId) curtain(id=curtainId)
-		Assertions.assertNotNull(curtainServices.turnCurtainOff(curtainId, userId));
+		Assertions.assertNotNull(curtainServices.turnCurtainOff(curtainId));
 
 		// PASS : turn off user's(id=failUserId) curtain(id=failCurtainId)
-		Assertions.assertNull(curtainServices.turnCurtainOff(failCurtainId, failUserId));
+		Assertions.assertNull(curtainServices.turnCurtainOff(failCurtainId));
 	}
 
 	@Test
 	void turnCurtainOn() {
 		// PASS : turn on user's(id=userId) curtain(id=curtainId)
-		Assertions.assertNotNull(curtainServices.turnCurtainOn(curtainId, userId));
+		Assertions.assertNotNull(curtainServices.turnCurtainOn(curtainId));
 
 		// PASS : turn on user's(id=failUserId) curtain(id=failCurtainId)
-		Assertions.assertNull(curtainServices.turnCurtainOn(failCurtainId, failUserId));
+		Assertions.assertNull(curtainServices.turnCurtainOn(failCurtainId));
 	}
 
 	@Test
 	void getCurtain() {
 		// PASS : get user's(id=userId) curtain(id=curtainId)
-		Assertions.assertNotNull(curtainServices.getCurtain(curtainId, userId));
+		Assertions.assertNotNull(curtainServices.getCurtain(curtainId));
 
 		// PASS : get user's(id=failUserId) curtain(id=failCurtainId)
-		Assertions.assertNull(curtainServices.getCurtain(failCurtainId, failUserId));
+		Assertions.assertNull(curtainServices.getCurtain(failCurtainId));
 	}
 
 	@Test
 	void slideCurtainLevel() {
 		// PASS : slide user's(id=userId) curtain(id=curtainId)
-		Assertions.assertNotNull(curtainServices.slideCurtainLevel(curtainId, level, userId));
+		Assertions.assertNotNull(curtainServices.slideCurtainLevel(curtainId, level));
 
 		// PASS : slide user's(id=failUserId) curtain(id=failCurtainId)
-		Assertions.assertNull(curtainServices.slideCurtainLevel(failCurtainId, level, failUserId));
+		Assertions.assertNull(curtainServices.slideCurtainLevel(failCurtainId, level));
 	}
 }

@@ -26,7 +26,7 @@ public class LampResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public Lamp turnLampOff(@PathParam("lampId") String lampId, @PathParam("userId") String userId) {
         System.out.println("Turn user: " + userId + " lamp off");
-        return lampServices.turnLampOff(lampId, userId);
+        return lampServices.turnLampOff(lampId);
     }
 
     @PUT
@@ -35,7 +35,7 @@ public class LampResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public Lamp turnLampOn(@PathParam("lampId") String lampId, @PathParam("userId") String userId) {
         System.out.println("Turn user: " + userId + " lamp on");
-        return lampServices.turnLampOn(lampId, userId);
+        return lampServices.turnLampOn(lampId);
     }
 
     @GET
@@ -44,7 +44,7 @@ public class LampResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public Lamp getLamp(@PathParam("lampId") String lampId, @PathParam("userId") String userId) {
         System.out.println("GET user: " + userId + " lamp");
-        return lampServices.getLamp(lampId, userId);
+        return lampServices.getLamp(lampId);
     }
 
     @PUT
@@ -53,6 +53,6 @@ public class LampResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public Lamp slideLampValue(@PathParam("lampId") String lampId, @PathParam("value") double value, @PathParam("userId") String userId) {
         System.out.println("Slide user: " + userId + " lamp to value: " + value);
-        return lampServices.slideLampLevel(lampId, value, userId);
+        return lampServices.slideLampLevel(lampId, value);
     }
 }
