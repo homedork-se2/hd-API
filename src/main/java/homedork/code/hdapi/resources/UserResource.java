@@ -58,7 +58,7 @@ public class UserResource {
 	 * @param deviceType - DeviceType selected by user
 	 * @return - String of pin slot to plug new device.
 	 */
-	@POST
+	@GET
 	@Path("/{userId}/new-device/{deviceType}/")
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)

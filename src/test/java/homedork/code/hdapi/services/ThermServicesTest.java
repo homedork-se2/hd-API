@@ -36,7 +36,7 @@ class ThermServicesTest {
 		Assertions.assertNotNull(thermServices.getAllTherms(userId));
 
 		// PASS : getting all therms with fail user ID
-		Assertions.assertEquals(thermServices.getAllTherms(failUserId), thermometers);
+		Assertions.assertNull(thermServices.getAllTherms(failUserId));
 	}
 
 	@Test

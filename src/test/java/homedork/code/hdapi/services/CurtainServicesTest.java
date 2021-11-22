@@ -36,7 +36,7 @@ class CurtainServicesTest {
 		Assertions.assertNotNull(curtainServices.getAllCurtains(userId));
 
 		// PASS : getting all curtains with fail user ID
-		Assertions.assertEquals(curtainServices.getAllCurtains(failUserId), curtains);
+		Assertions.assertNull(curtainServices.getAllCurtains(failUserId));
 	}
 
 	@Test

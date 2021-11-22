@@ -31,7 +31,7 @@ public class WindowServices {
 
     public Window turnWindowOn(String windowId) {
         try {
-            return queryBuilder.turnDeviceOnGeneric(windowId, DeviceType.ALARM);
+            return queryBuilder.turnDeviceOnGeneric(windowId, DeviceType.WINDOW);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -49,7 +49,7 @@ public class WindowServices {
 
     public Window slideWindowLevel(String windowId, double value) {
         try {
-            return queryBuilder.deviceSlideLevelGeneric(value, windowId, DeviceType.ALARM);
+            return queryBuilder.deviceSlideLevelGeneric(value, windowId, DeviceType.WINDOW);
         } catch (IOException e) {
             e.printStackTrace();
         }

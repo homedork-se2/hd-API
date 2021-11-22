@@ -45,7 +45,7 @@ class LampServicesTest {
 		Assertions.assertNotNull(lampServices.getAllLamps(userId));
 
 		// PASS : getting all lamps with fail user ID
-		Assertions.assertEquals(lampServices.getAllLamps(failUserId), lamps);
+		Assertions.assertNull(lampServices.getAllLamps(failUserId));
 	}
 
 	@Test
