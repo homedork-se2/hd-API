@@ -1,5 +1,6 @@
 package homedork.code.hdapi.resources;
 
+import homedork.code.hdapi.model.Alarm;
 import homedork.code.hdapi.model.Window;
 import homedork.code.hdapi.services.WindowServices;
 
@@ -48,5 +49,13 @@ public class WindowResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public Window slideWindowValue(@PathParam("windowId") String windowId, @PathParam("value") double value, @PathParam("userId") String userId) {
         return windowServices.slideWindowLevel(windowId, value);
+    }
+
+    @DELETE
+    @Path("/{windowId}/delete")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Window deleteWindow(@PathParam("windowId") String windowId) {
+        return windowServices.deleteWindow(windowId);
     }
 }

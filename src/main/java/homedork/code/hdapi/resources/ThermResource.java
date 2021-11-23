@@ -1,5 +1,6 @@
 package homedork.code.hdapi.resources;
 
+import homedork.code.hdapi.model.Alarm;
 import homedork.code.hdapi.model.Thermometer;
 import homedork.code.hdapi.services.ThermServices;
 
@@ -50,4 +51,11 @@ public class ThermResource {
 		return thermServices.slideThermLevel(thermId, value);
 	}
 
+	@DELETE
+	@Path("/{thermId}/delete")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Thermometer deleteTherm(@PathParam("thermId") String thermId) {
+		return thermServices.deleteTherm(thermId);
+	}
 }

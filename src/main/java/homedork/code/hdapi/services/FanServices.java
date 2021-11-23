@@ -3,6 +3,7 @@ package homedork.code.hdapi.services;
 import homedork.code.hdapi.dataservices.QueryBuilder;
 import homedork.code.hdapi.model.DeviceType;
 import homedork.code.hdapi.model.Fan;
+import homedork.code.hdapi.model.Window;
 
 import java.io.IOException;
 import java.util.List;
@@ -50,6 +51,15 @@ public class FanServices {
 	public Fan slideFanLevel(String fanId, double value) {
 		try {
 			return queryBuilder.deviceSlideLevelGeneric(value, fanId, DeviceType.FAN);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public Fan deleteFan(String fanId) {
+		try {
+			return queryBuilder.deleteGenericDevice(fanId);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -1,5 +1,6 @@
 package homedork.code.hdapi.resources;
 
+import homedork.code.hdapi.model.Alarm;
 import homedork.code.hdapi.model.Curtain;
 import homedork.code.hdapi.services.CurtainServices;
 
@@ -48,5 +49,13 @@ public class CurtainResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Curtain slideCurtainValue(@PathParam("curtainId") String curtainId, @PathParam("value") double value, @PathParam("userId") String userId) {
 		return curtainServices.slideCurtainLevel(curtainId, value);
+	}
+
+	@DELETE
+	@Path("/{curtainId}/delete")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Curtain deleteCurtain(@PathParam("curtainId") String curtainId) {
+		return curtainServices.deleteCurtain(curtainId);
 	}
 }

@@ -3,6 +3,7 @@ package homedork.code.hdapi.services;
 import homedork.code.hdapi.dataservices.QueryBuilder;
 import homedork.code.hdapi.model.DeviceType;
 import homedork.code.hdapi.model.Lamp;
+import homedork.code.hdapi.model.Window;
 
 import java.io.IOException;
 import java.util.List;
@@ -50,6 +51,15 @@ public class LampServices {
 	public Lamp slideLampLevel(String lampId, double value) {
 		try {
 			return queryBuilder.deviceSlideLevelGeneric(value, lampId, DeviceType.LAMP);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public Lamp deleteLamp(String lampId) {
+		try {
+			return queryBuilder.deleteGenericDevice(lampId);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

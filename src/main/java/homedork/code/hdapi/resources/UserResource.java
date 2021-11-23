@@ -1,5 +1,6 @@
 package homedork.code.hdapi.resources;
 
+import homedork.code.hdapi.model.Alarm;
 import homedork.code.hdapi.model.Device;
 import homedork.code.hdapi.model.User;
 import homedork.code.hdapi.services.UserServices;
@@ -132,5 +133,11 @@ public class UserResource {
 		return new WindowResource();
 	}
 
-
+	@DELETE
+	@Path("/{userId}/delete")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public User deleteUser(@PathParam("userId") String userId) {
+		return userServices.deleteUser(userId);
+	}
 }

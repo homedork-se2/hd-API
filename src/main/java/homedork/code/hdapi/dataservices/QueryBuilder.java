@@ -64,6 +64,11 @@ public class QueryBuilder {
         return jsonUserHandler(q);
     }
 
+    public User deleteUser(String userId) throws IOException {
+        String query = String.format("Delete * from users INNER JOIN devices WHERE users.id = devices.user_id and users.user_id = '%s';", userId);
+        return jsonUserHandler(query);
+    }
+
     public String getFreePin(String userId, String deviceType) {
         String contactor = String.format("FREE-PIN %s %s",userId, deviceType);
         boolean b = client.sendQuery(contactor);
@@ -164,6 +169,11 @@ public class QueryBuilder {
             query = String.format("UPDATE devices SET state='ON', level=" + level + " WHERE id='%s';", deviceId);
 
         return (T) jsonGenericHandler(query);
+    }
+
+    public <T> T deleteGenericDevice(String deviceId) throws IOException {
+        String query = String.format("DELETE * from devices WHERE id='%s';", deviceId);
+        return jsonGenericHandler(query);
     }
 
     //  Lamp Queries ------------------------------------------------------------------------------------------

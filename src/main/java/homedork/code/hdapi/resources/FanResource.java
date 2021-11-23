@@ -1,5 +1,6 @@
 package homedork.code.hdapi.resources;
 
+import homedork.code.hdapi.model.Alarm;
 import homedork.code.hdapi.model.Fan;
 import homedork.code.hdapi.services.FanServices;
 
@@ -50,5 +51,11 @@ public class FanResource {
 		return fanServices.slideFanLevel(fanId, value);
 	}
 
-
+	@DELETE
+	@Path("/{fanId}/delete")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Fan deleteFan(@PathParam("fanId") String fanId) {
+		return fanServices.deleteFan(fanId);
+	}
 }
