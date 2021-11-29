@@ -5,9 +5,9 @@ import homedork.code.hdapi.model.Device;
 import homedork.code.hdapi.model.DeviceType;
 import homedork.code.hdapi.model.User;
 import homedork.code.hdapi.utility.JsonJavaParser;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -58,7 +58,7 @@ public class QueryBuilder {
 		return jsonUserDevicesHandler(query);
 	}
 
-	public User addNewUser(@NotNull User user) throws IOException {
+	public User addNewUser(User user) throws IOException {
 		// INSERT INTO `users` (`id`, `name`, `email`) VALUES ('dada', 'dada', 'dada');
 		String q = String.format("INSERT INTO `users` (`id`, `name`, `email`) VALUES ('%s', '%s', '%s');", user.getId(), user.getName(),
 				user.getEmail());
@@ -137,6 +137,10 @@ public class QueryBuilder {
 				return (List<T>) JsonJavaParser.toAlarmObjects(jsonObject);
 			else if(jsonObject.contains("WINDOW"))
 				return (List<T>) JsonJavaParser.toWindowObjects(jsonObject);
+			else {
+				List<Device> list = new ArrayList<>();
+				return (List<T>) list;
+			}
 		}
 		return null;
 	}

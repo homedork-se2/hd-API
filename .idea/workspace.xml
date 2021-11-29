@@ -9,47 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e161120b-1dc8-45be-9def-572ea53de1ee" name="Changes" comment="ADDING NEW DEVICE, TESTED">
-      <change afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/AlarmServicesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/WindowServicesTest.java" afterDir="false" />
+    <list default="true" id="e161120b-1dc8-45be-9def-572ea53de1ee" name="Changes" comment="API test - mid way req. (pass)">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/hd_API_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/hd_API_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/hd_API_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/hd_API_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/dataservices/QueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/dataservices/QueryBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Curtain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Curtain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Device.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Fan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Fan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Lamp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Lamp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Thermometer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/model/Thermometer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/AlarmResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/AlarmResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/CurtainResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/CurtainResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/FanResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/FanResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/LampResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/LampResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/ThermResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/ThermResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/UserResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/WindowResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/WindowResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/MP3Services.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/WindowServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/WindowServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/utility/JsonJavaParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/utility/JsonJavaParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/security/KeyLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/security/KeyLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/AlarmServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/AlarmServicesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/CurtainServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/CurtainServicesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/FanServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/FanServicesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/LampServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/LampServicesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/ThermServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/ThermServicesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/UserServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/UserServicesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/WindowServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/WindowServicesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/dataservices/QueryBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/dataservices/QueryBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/model/Curtain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/model/Curtain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/model/Device.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/model/Device.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/model/Fan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/model/Fan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/model/Lamp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/model/Lamp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/model/Thermometer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/model/Thermometer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/AlarmResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/AlarmResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/CurtainResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/CurtainResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/FanResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/FanResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/LampResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/LampResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/ThermResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/ThermResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/UserResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/UserResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/services/CurtainServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/services/CurtainServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/services/FanServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/services/FanServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/services/LampServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/services/LampServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/services/ThermServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/services/ThermServices.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="api-protype-test-pass" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -94,13 +66,13 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/FanServicesTest.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/homedork/code/hdapi/dataservices/QueryBuilder.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/homedork/code/hdapi/comm/Client.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/LampServices.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/UserServicesTest.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/LampServicesTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/homedork/code/hdapi/comm/Client.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/LampServices.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/ThermServicesTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/FanServicesTest.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/CurtainServicesTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
@@ -133,6 +105,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../hd-server" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -152,8 +125,21 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.52">
-    <configuration name="AlarmServicesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LampServicesTest.getAllLamps">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LampServicesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hd-API" />
       <extension name="coverage">
         <pattern>
@@ -162,8 +148,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="homedork.code.hdapi.services" />
-      <option name="MAIN_CLASS_NAME" value="homedork.code.hdapi.services.AlarmServicesTest" />
+      <option name="MAIN_CLASS_NAME" value="homedork.code.hdapi.services.LampServicesTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LampServicesTest.getAllLamps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hd-API" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homedork.code.hdapi.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homedork.code.hdapi.services" />
+      <option name="MAIN_CLASS_NAME" value="homedork.code.hdapi.services.LampServicesTest" />
+      <option name="METHOD_NAME" value="getAllLamps" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LampServicesTest.turnLampOff" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hd-API" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homedork.code.hdapi.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homedork.code.hdapi.services" />
+      <option name="MAIN_CLASS_NAME" value="homedork.code.hdapi.services.LampServicesTest" />
+      <option name="METHOD_NAME" value="turnLampOff" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -200,38 +218,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WindowServicesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hd-API" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="homedork.code.hdapi.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="homedork.code.hdapi.services" />
-      <option name="MAIN_CLASS_NAME" value="homedork.code.hdapi.services.WindowServicesTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WindowServicesTest.turnWindowOn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hd-API" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="homedork.code.hdapi.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="homedork.code.hdapi.services" />
-      <option name="MAIN_CLASS_NAME" value="homedork.code.hdapi.services.WindowServicesTest" />
-      <option name="METHOD_NAME" value="turnWindowOn" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat 9.0.52" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.52" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.52" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.53" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -322,20 +309,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Tomcat 9.0.52" />
-      <item itemvalue="JUnit.WindowServicesTest" />
-      <item itemvalue="JUnit.WindowServicesTest.turnWindowOn" />
-      <item itemvalue="JUnit.AlarmServicesTest" />
       <item itemvalue="JUnit.UserServicesTest.addNewUser" />
       <item itemvalue="JUnit.UserServicesTest.getPinSLot" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.52" />
+      <item itemvalue="JUnit.LampServicesTest" />
+      <item itemvalue="JUnit.LampServicesTest.turnLampOff" />
+      <item itemvalue="JUnit.LampServicesTest.getAllLamps" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LampServicesTest.getAllLamps" />
+        <item itemvalue="JUnit.LampServicesTest" />
+        <item itemvalue="JUnit.LampServicesTest.turnLampOff" />
         <item itemvalue="JUnit.UserServicesTest.getPinSLot" />
         <item itemvalue="JUnit.UserServicesTest.addNewUser" />
-        <item itemvalue="JUnit.AlarmServicesTest" />
-        <item itemvalue="JUnit.WindowServicesTest" />
-        <item itemvalue="JUnit.WindowServicesTest.turnWindowOn" />
       </list>
     </recent_temporary>
   </component>

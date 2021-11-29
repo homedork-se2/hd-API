@@ -35,7 +35,7 @@ class FanServicesTest {
 		Assertions.assertNotNull(fanServices.getAllFans(userId));
 
 		// PASS : getting all fans with fail user ID
-		Assertions.assertNull(fanServices.getAllFans(failUserId));
+		Assertions.assertEquals(fanServices.getAllFans(failUserId), fans);
 	}
 
 	@Test

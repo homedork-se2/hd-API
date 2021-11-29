@@ -32,7 +32,7 @@ class AlarmServicesTest {
 		Assertions.assertNotNull(alarmServices.getAllAlarms(userId));
 
 		// PASS : getting all alarms with fail user ID
-		Assertions.assertNull(alarmServices.getAllAlarms(failUserId));
+		Assertions.assertEquals(alarmServices.getAllAlarms(failUserId), alarms);
 	}
 
 	@Test

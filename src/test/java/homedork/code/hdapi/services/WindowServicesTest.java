@@ -1,5 +1,6 @@
 package homedork.code.hdapi.services;
 
+import homedork.code.hdapi.model.Device;
 import homedork.code.hdapi.model.Window;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -20,7 +21,7 @@ class WindowServicesTest {
 	static String windowId = "34318";
 	static double level = 23.0;
 
-	List<Window> windows;
+	List<Device> windows;
 	// REQ:  used database tables are populated
 
 	@BeforeAll
@@ -35,7 +36,7 @@ class WindowServicesTest {
 		Assertions.assertNotNull(windowServices.getAllWindows(userId));
 
 		// PASS : getting all windows with fail user ID
-		Assertions.assertNull(windowServices.getAllWindows(failUserId));
+		Assertions.assertEquals(windowServices.getAllWindows(failUserId), windows);
 	}
 
 	@Test

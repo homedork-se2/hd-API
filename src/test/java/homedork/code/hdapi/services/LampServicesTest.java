@@ -1,5 +1,6 @@
 package homedork.code.hdapi.services;
 
+import homedork.code.hdapi.model.Device;
 import homedork.code.hdapi.model.Lamp;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -45,7 +46,7 @@ class LampServicesTest {
 		Assertions.assertNotNull(lampServices.getAllLamps(userId));
 
 		// PASS : getting all lamps with fail user ID
-		Assertions.assertNull(lampServices.getAllLamps(failUserId));
+		Assertions.assertEquals(lampServices.getAllLamps(failUserId), lamps);
 	}
 
 	@Test
