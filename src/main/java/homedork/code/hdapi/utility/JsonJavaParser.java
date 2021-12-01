@@ -10,7 +10,7 @@ import java.util.List;
 
 public class JsonJavaParser {
 
-//	@SuppressWarnings("unchecked")
+	//	@SuppressWarnings("unchecked")
 //	public static <T> T toGenericObject(String json) {
 //
 //		if(json.contains("LAMP"))
@@ -138,9 +138,9 @@ public class JsonJavaParser {
 		Gson gson = new Gson();
 		List<Device> Devices = new ArrayList<>();
 		JSONArray jsonArray = new JSONArray(json);
-		for (int i = 0; i < jsonArray.toList().size(); i++) {
+		for(int i = 0; i < jsonArray.toList().size(); i++) {
 			JSONObject jsonDeviceObject = (JSONObject) jsonArray.get(i);
-			Device deviceObject = gson.fromJson(jsonDeviceObject.toString(),Device.class);
+			Device deviceObject = gson.fromJson(jsonDeviceObject.toString(), Device.class);
 			Devices.add(deviceObject);
 		}
 		return Devices;

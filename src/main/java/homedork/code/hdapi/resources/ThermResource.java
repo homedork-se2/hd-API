@@ -7,6 +7,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
+@Path("/therms")
 public class ThermResource {
 	ThermServices thermServices = new ThermServices();
 
@@ -15,6 +16,7 @@ public class ThermResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public List<Thermometer> getTherms(@PathParam("userId") String userId) {
+		System.out.println("GET user: " + userId + " therms");
 		return thermServices.getAllTherms(userId);
 	}
 
@@ -23,6 +25,7 @@ public class ThermResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Thermometer turnThermOff(@PathParam("thermId") String thermId, @PathParam("userId") String userId) {
+		System.out.println("Turn user: " + userId + " therm off");
 		return thermServices.turnThermOff(thermId);
 	}
 
@@ -31,6 +34,7 @@ public class ThermResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Thermometer turnThermOn(@PathParam("thermId") String thermId, @PathParam("userId") String userId) {
+		System.out.println("Turn user: " + userId + " therm on");
 		return thermServices.turnThermOn(thermId);
 	}
 
@@ -39,6 +43,7 @@ public class ThermResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Thermometer getTherm(@PathParam("thermId") String thermId, @PathParam("userId") String userId) {
+		System.out.println("GET user: " + userId + " therm");
 		return thermServices.getTherm(thermId);
 	}
 
@@ -47,6 +52,7 @@ public class ThermResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Thermometer slideThermValue(@PathParam("thermId") String thermId, @PathParam("value") double value, @PathParam("userId") String userId) {
+		System.out.println("Slide user: " + userId + " therm to value: " + value);
 		return thermServices.slideThermLevel(thermId, value);
 	}
 

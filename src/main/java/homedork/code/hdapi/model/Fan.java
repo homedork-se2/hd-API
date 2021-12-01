@@ -1,6 +1,5 @@
 package homedork.code.hdapi.model;
 
-import java.util.UUID;
 
 public class Fan extends Device {
 

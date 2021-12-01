@@ -1,5 +1,6 @@
 package homedork.code.hdapi.services;
 
+import homedork.code.hdapi.model.Device;
 import homedork.code.hdapi.model.Lamp;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
