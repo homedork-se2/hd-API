@@ -64,8 +64,6 @@ public class Client {
 			socket = setUpSocket();
 			dataInputStream = getInputStream(socket);
 			dataOutputStream = getOutputStream(socket);
-
-
 			cryptoHandler = new CryptoHandler(); // crashes on socket fail
 			bufferedReader = new BufferedReader(new InputStreamReader(dataInputStream));
 		} catch (IOException e) {

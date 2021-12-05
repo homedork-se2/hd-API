@@ -45,4 +45,13 @@ public class UserServices {
 		}
 		return null;
 	}
+
+    public Device removeDevice(String deviceId) {
+        try {
+            return queryBuilder.removeDevice(deviceId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
