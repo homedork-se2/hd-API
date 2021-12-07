@@ -8,6 +8,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
+@Path("/fans")
 public class FanResource {
 
 	FanServices fanServices = new FanServices();
@@ -16,6 +17,7 @@ public class FanResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public List<Fan> getFans(@PathParam("userId") String userId) {
+		System.out.println("GET user: " + userId + " fans");
 		return fanServices.getAllFans(userId);
 	}
 
@@ -24,6 +26,7 @@ public class FanResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Fan turnFanOff(@PathParam("fanId") String fanId, @PathParam("userId") String userId) {
+		System.out.println("Turn user: " + userId + " fan off");
 		return fanServices.turnFanOff(fanId);
 	}
 
@@ -32,6 +35,7 @@ public class FanResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Fan turnFanOn(@PathParam("fanId") String fanId, @PathParam("userId") String userId) {
+		System.out.println("Turn user: " + userId + " fan on");
 		return fanServices.turnFanOn(fanId);
 	}
 
@@ -40,6 +44,7 @@ public class FanResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Fan getFan(@PathParam("fanId") String fanId, @PathParam("userId") String userId) {
+		System.out.println("GET user: " + userId + " fan");
 		return fanServices.getFan(fanId);
 	}
 
@@ -48,6 +53,7 @@ public class FanResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Fan slideFanValue(@PathParam("fanId") String fanId, @PathParam("value") double value, @PathParam("userId") String userId) {
+		System.out.println("Slide user: " + userId + " fan to value: " + value);
 		return fanServices.slideFanLevel(fanId, value);
 	}
 //

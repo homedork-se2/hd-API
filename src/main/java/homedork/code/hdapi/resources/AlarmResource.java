@@ -7,6 +7,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
+@Path("/alarms")
 public class AlarmResource {
 
     AlarmServices alarmServices = new AlarmServices();
@@ -15,6 +16,7 @@ public class AlarmResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public List<Alarm> getAlarms(@PathParam("userId") String userId) {
+        System.out.println("GET user: " + userId + " alarms");
         return alarmServices.getAllAlarms(userId);
     }
 
@@ -23,6 +25,7 @@ public class AlarmResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Alarm turnAlarmOff(@PathParam("alarmId") String alarmId, @PathParam("userId") String userId) {
+        System.out.println("Turn user: " + userId + " alarm off");
         return alarmServices.turnAlarmOff(alarmId);
     }
 
@@ -31,6 +34,7 @@ public class AlarmResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Alarm turnAlarmOn(@PathParam("alarmId") String alarmId, @PathParam("userId") String userId) {
+        System.out.println("Turn user: " + userId + " alarm on");
         return alarmServices.turnAlarmOn(alarmId);
     }
 
@@ -39,6 +43,7 @@ public class AlarmResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Alarm getAlarm(@PathParam("alarmId") String alarmId, @PathParam("userId") String userId) {
+        System.out.println("GET user: " + userId + " alarm");
         return alarmServices.getAlarm(alarmId);
     }
 
@@ -47,6 +52,7 @@ public class AlarmResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Alarm slideAlarmValue(@PathParam("alarmId") String alarmId, @PathParam("value") double value, @PathParam("userId") String userId) {
+        System.out.println("Slide user: " + userId + " alarm to value: " + value);
         return alarmServices.slideAlarmLevel(alarmId, value);
     }
 //

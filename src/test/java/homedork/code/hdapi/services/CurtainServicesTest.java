@@ -40,21 +40,21 @@ class CurtainServicesTest {
 	}
 
 	@Test
-	void turnCurtainOff() {
+	void closeCurtain() {
 		// PASS : turn off user's(id=userId) curtain(id=curtainId)
-		Assertions.assertNotNull(curtainServices.turnCurtainOff(curtainId));
+		Assertions.assertNotNull(curtainServices.closeCurtain(curtainId));
 
 		// PASS : turn off user's(id=failUserId) curtain(id=failCurtainId)
-		Assertions.assertNull(curtainServices.turnCurtainOff(failCurtainId));
+		Assertions.assertNull(curtainServices.closeCurtain(failCurtainId));
 	}
 
 	@Test
-	void turnCurtainOn() {
+	void openCurtain() {
 		// PASS : turn on user's(id=userId) curtain(id=curtainId)
-		Assertions.assertNotNull(curtainServices.turnCurtainOn(curtainId));
+		Assertions.assertNotNull(curtainServices.openCurtain(curtainId));
 
 		// PASS : turn on user's(id=failUserId) curtain(id=failCurtainId)
-		Assertions.assertNull(curtainServices.turnCurtainOn(failCurtainId));
+		Assertions.assertNull(curtainServices.openCurtain(failCurtainId));
 	}
 
 	@Test

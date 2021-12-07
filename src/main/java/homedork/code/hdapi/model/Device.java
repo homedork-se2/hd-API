@@ -6,7 +6,7 @@ public class Device {
     public DeviceType deviceType;  // "LAMP","FAN" , "THERMOMETER", "CURTAIN" ...
     public String userId;
     public double level;  // brightness : Lamp[ceiling + floor] . Speed : Fan . Warmth : Thermometer
-    public int pin;
+    public String pin;
     public String hubAddress;
 
     public DeviceType getDeviceType() {
@@ -69,11 +69,11 @@ public class Device {
                 '}';
     }
 
-    public int getPin() {
+    public String getPin() {
         return pin;
     }
 
-    public void setPin(int pin) {
+    public void setPin(String pin) {
         this.pin = pin;
     }
 
