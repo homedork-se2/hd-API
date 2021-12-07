@@ -13,7 +13,7 @@ import java.util.List;
 
 
 public class QueryBuilder {
-  
+
     /**
      * Devices table for all devices[floorLamp,ceilingLamp,fan] - nullables for type don't share a particular attribute.
      * basically devices table is always updated/read through here, alongside users table for user based edits,
@@ -73,11 +73,11 @@ public class QueryBuilder {
     }
 
     public String getFreePin(String userId, String deviceType) {
-        String contactor = String.format("FREE-PIN %s %s",userId, deviceType);
+        String contactor = String.format("FREE-PIN %s %s", userId, deviceType);
         boolean b = client.sendQuery(contactor);
 
         try {
-            if(b) {
+            if (b) {
                 return client.getResponse();
             }
         } catch (IOException e) {
@@ -110,18 +110,18 @@ public class QueryBuilder {
         }
         return null;
     }
-  
+
     public <T> T getGenericDevice(String deviceId) throws IOException {
         String query = String.format("SELECT * from devices WHERE id='%s';", deviceId);
         return jsonGenericHandler(query);
     }
-  
-  	/**
-	 * @param userId - user's ID
-	 * @param type   - device type
-	 * @param <T>    - Type of list returned
-	 * @return - List of devices
-	 */
+
+    /**
+     * @param userId - user's ID
+     * @param type   - device type
+     * @param <T>    - Type of list returned
+     * @return - List of devices
+     */
     @SuppressWarnings("unchecked")
     public <T> List<T> getAllDevicesGeneric(String userId, DeviceType type) throws IOException {
         String query = String.format("SELECT * from devices WHERE user_id='%s' AND type='%s';", userId, type);
@@ -143,6 +143,10 @@ public class QueryBuilder {
                 return (List<T>) JsonJavaParser.toAlarmObjects(jsonObject);
             else if (jsonObject.contains("WINDOW"))
                 return (List<T>) JsonJavaParser.toWindowObjects(jsonObject);
+            else {
+                List<Device> list = new ArrayList<>();
+                return (List<T>) list;
+            }
         }
         return null;
     }
@@ -180,8 +184,8 @@ public class QueryBuilder {
         return (T) jsonGenericHandler(query);
     }
 
-	public <T> T removeDevice(String deviceId) throws IOException {
-		String query = String.format("DELETE FROM devices WHERE id='%s';", deviceId);
-		return jsonGenericHandler(query);
-	}
+    public <T> T removeDevice(String deviceId) throws IOException {
+        String query = String.format("DELETE FROM devices WHERE id='%s';", deviceId);
+        return jsonGenericHandler(query);
+    }
 }
