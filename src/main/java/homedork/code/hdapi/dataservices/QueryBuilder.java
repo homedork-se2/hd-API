@@ -6,6 +6,7 @@ import homedork.code.hdapi.model.DeviceType;
 import homedork.code.hdapi.model.User;
 import homedork.code.hdapi.utility.JsonJavaParser;
 
+import javax.validation.constraints.NotNull;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
