@@ -50,12 +50,12 @@ public class FanResource {
 	public Fan slideFanValue(@PathParam("fanId") String fanId, @PathParam("value") double value, @PathParam("userId") String userId) {
 		return fanServices.slideFanLevel(fanId, value);
 	}
-
-	@DELETE
-	@Path("/{fanId}/delete")
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public Fan deleteFan(@PathParam("fanId") String fanId) {
-		return fanServices.deleteFan(fanId);
-	}
+//
+//	@DELETE
+//	@Path("/{fanId}/delete")
+//	@Produces(MediaType.APPLICATION_JSON)
+//	@Consumes(MediaType.APPLICATION_JSON)
+//	public Fan deleteFan(@PathParam("fanId") String fanId) {
+//		return fanServices.deleteFan(fanId);
+//	}
 }

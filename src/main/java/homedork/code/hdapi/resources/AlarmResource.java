@@ -49,12 +49,12 @@ public class AlarmResource {
     public Alarm slideAlarmValue(@PathParam("alarmId") String alarmId, @PathParam("value") double value, @PathParam("userId") String userId) {
         return alarmServices.slideAlarmLevel(alarmId, value);
     }
-
-    @DELETE
-    @Path("/{alarmId}/delete")
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Alarm deleteAlarm(@PathParam("alarmId") String alarmId) {
-        return alarmServices.deleteAlarm(alarmId);
-    }
+//
+//    @DELETE
+//    @Path("/{alarmId}/delete")
+//    @Produces(MediaType.APPLICATION_JSON)
+//    @Consumes(MediaType.APPLICATION_JSON)
+//    public Alarm deleteAlarm(@PathParam("alarmId") String alarmId) {
+//        return alarmServices.deleteAlarm(alarmId);
+//    }
 }

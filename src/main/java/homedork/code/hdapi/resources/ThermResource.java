@@ -50,12 +50,12 @@ public class ThermResource {
 	public Thermometer slideThermValue(@PathParam("thermId") String thermId, @PathParam("value") double value, @PathParam("userId") String userId) {
 		return thermServices.slideThermLevel(thermId, value);
 	}
-
-	@DELETE
-	@Path("/{thermId}/delete")
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public Thermometer deleteTherm(@PathParam("thermId") String thermId) {
-		return thermServices.deleteTherm(thermId);
-	}
+//
+//	@DELETE
+//	@Path("/{thermId}/delete")
+//	@Produces(MediaType.APPLICATION_JSON)
+//	@Consumes(MediaType.APPLICATION_JSON)
+//	public Thermometer deleteTherm(@PathParam("thermId") String thermId) {
+//		return thermServices.deleteTherm(thermId);
+//	}
 }

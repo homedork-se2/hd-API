@@ -50,12 +50,12 @@ public class CurtainResource {
 	public Curtain slideCurtainValue(@PathParam("curtainId") String curtainId, @PathParam("value") double value, @PathParam("userId") String userId) {
 		return curtainServices.slideCurtainLevel(curtainId, value);
 	}
-
-	@DELETE
-	@Path("/{curtainId}/delete")
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public Curtain deleteCurtain(@PathParam("curtainId") String curtainId) {
-		return curtainServices.deleteCurtain(curtainId);
-	}
+//
+//	@DELETE
+//	@Path("/{curtainId}/delete")
+//	@Produces(MediaType.APPLICATION_JSON)
+//	@Consumes(MediaType.APPLICATION_JSON)
+//	public Curtain deleteCurtain(@PathParam("curtainId") String curtainId) {
+//		return curtainServices.deleteCurtain(curtainId);
+//	}
 }
