@@ -3,6 +3,7 @@ package homedork.code.hdapi.services;
 import homedork.code.hdapi.dataservices.QueryBuilder;
 import homedork.code.hdapi.model.Curtain;
 import homedork.code.hdapi.model.DeviceType;
+import homedork.code.hdapi.model.Window;
 
 import java.io.IOException;
 import java.util.List;

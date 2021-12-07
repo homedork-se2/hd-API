@@ -1,5 +1,6 @@
 package homedork.code.hdapi.resources;
 
+import homedork.code.hdapi.model.Alarm;
 import homedork.code.hdapi.model.Lamp;
 import homedork.code.hdapi.services.LampServices;
 
@@ -55,4 +56,5 @@ public class LampResource {
         System.out.println("Slide user: " + userId + " lamp to value: " + value);
         return lampServices.slideLampLevel(lampId, value);
     }
+
 }

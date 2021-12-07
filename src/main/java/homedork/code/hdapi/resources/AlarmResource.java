@@ -55,4 +55,5 @@ public class AlarmResource {
         System.out.println("Slide user: " + userId + " alarm to value: " + value);
         return alarmServices.slideAlarmLevel(alarmId, value);
     }
+
 }

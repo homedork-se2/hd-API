@@ -1,5 +1,6 @@
 package homedork.code.hdapi.resources;
 
+import homedork.code.hdapi.model.Alarm;
 import homedork.code.hdapi.model.Fan;
 import homedork.code.hdapi.services.FanServices;
 
@@ -55,6 +56,5 @@ public class FanResource {
 		System.out.println("Slide user: " + userId + " fan to value: " + value);
 		return fanServices.slideFanLevel(fanId, value);
 	}
-
 
 }

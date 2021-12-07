@@ -1,5 +1,6 @@
 package homedork.code.hdapi.resources;
 
+import homedork.code.hdapi.model.Alarm;
 import homedork.code.hdapi.model.Curtain;
 import homedork.code.hdapi.services.CurtainServices;
 
@@ -55,4 +56,5 @@ public class CurtainResource {
 		System.out.println("Slide user: " + userId + " curtain to value: " + value);
 		return curtainServices.slideCurtainLevel(curtainId, value);
 	}
+
 }

@@ -1,5 +1,6 @@
 package homedork.code.hdapi.resources;
 
+import homedork.code.hdapi.model.Alarm;
 import homedork.code.hdapi.model.Window;
 import homedork.code.hdapi.services.WindowServices;
 
@@ -55,4 +56,5 @@ public class WindowResource {
         System.out.println("Slide user: " + userId + " window to value: " + value);
         return windowServices.slideWindowLevel(windowId, value);
     }
+
 }

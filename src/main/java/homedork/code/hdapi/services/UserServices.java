@@ -3,6 +3,7 @@ package homedork.code.hdapi.services;
 import homedork.code.hdapi.dataservices.QueryBuilder;
 import homedork.code.hdapi.model.Device;
 import homedork.code.hdapi.model.User;
+import homedork.code.hdapi.model.Window;
 
 import java.io.IOException;
 import java.util.List;
@@ -46,12 +47,21 @@ public class UserServices {
 		return null;
 	}
 
-    public Device removeDevice(String deviceId) {
-        try {
-            return queryBuilder.removeDevice(deviceId);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
+	public User deleteUser(String userId) {
+		try {
+			return queryBuilder.deleteUser(userId);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+  public Device removeDevice(String deviceId) {
+    try {
+      return queryBuilder.removeDevice(deviceId);
+    } catch (Exception e) {
+      e.printStackTrace();
     }
+      return null;
+   }
 }
