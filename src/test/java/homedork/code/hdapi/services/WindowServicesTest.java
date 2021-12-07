@@ -1,7 +1,6 @@
 package homedork.code.hdapi.services;
 
 import homedork.code.hdapi.model.Device;
-import homedork.code.hdapi.model.Window;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -40,21 +39,21 @@ class WindowServicesTest {
 	}
 
 	@Test
-	void turnWindowOff() {
+	void closeWindow() {
 		// PASS : turn off user's(id=userId) window(id=windowId)
-		Assertions.assertNotNull(windowServices.turnWindowOff(windowId));
+		Assertions.assertNotNull(windowServices.closeWindow(windowId));
 
 		// PASS : turn off user's window(id=failWindowId)
-		Assertions.assertNull(windowServices.turnWindowOff(failWindowId));
+		Assertions.assertNull(windowServices.closeWindow(failWindowId));
 	}
 
 	@Test
-	void turnWindowOn() {
+	void openWindow() {
 		// PASS : turn on user's(id=userId) window(id=windowId)
-		Assertions.assertNotNull(windowServices.turnWindowOn(windowId));
+		Assertions.assertNotNull(windowServices.openWindow(windowId));
 
 		// PASS : turn on user's window(id=failWindowId)
-		Assertions.assertNull(windowServices.turnWindowOn(failWindowId));
+		Assertions.assertNull(windowServices.openWindow(failWindowId));
 	}
 
 	@Test

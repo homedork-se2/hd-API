@@ -10,23 +10,6 @@ import java.util.List;
 
 public class JsonJavaParser {
 
-	//	@SuppressWarnings("unchecked")
-//	public static <T> T toGenericObject(String json) {
-//
-//		if(json.contains("LAMP"))
-//		return (T) toLampObject(json);
-//		else if(json.contains("FAN"))
-//			return (T) toFanObject(json);
-//		else if(json.contains("CURTAIN"))
-//			return (T) toCurtainObject(json);
-//		else if(json.contains("THERM"))
-//			return (T) toThermObject(json);
-//		else if(json.contains("ALARM"))
-//			return (T) toAlarmObject(json);
-//		else if(json.contains("WINDOW"))
-//			return (T) toWindowObject(json);
-//		return null;
-//	}
 	public static Lamp toLampObject(String json) {
 		Gson gson = new Gson();
 		return gson.fromJson(json, Lamp.class);

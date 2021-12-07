@@ -22,6 +22,8 @@ class UserServicesTest {
 	List<Device> devices;
 	User user;
 	DeviceType deviceType;
+	// device ID
+	static String curtainId = "34316";
 
 	// REQ:  used database tables are populated
 
@@ -61,5 +63,11 @@ class UserServicesTest {
 	void getPinSLot() {
 		// PASS : insert new device
 		Assertions.assertNotNull(userServices.getPinSLot(userId, deviceType.toString()));
+	}
+
+	@Test
+	void removeDevice() {
+		// PASS : remove device
+		Assertions.assertNotNull(userServices.removeDevice(curtainId));
 	}
 }

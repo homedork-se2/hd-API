@@ -24,18 +24,18 @@ public class WindowResource {
     @Path("/{windowId}/turnOff")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Window turnWindowOff(@PathParam("windowId") String windowId, @PathParam("userId") String userId) {
+    public Window closeWindow(@PathParam("windowId") String windowId, @PathParam("userId") String userId) {
         System.out.println("Turn user: " + userId + " window off");
-        return windowServices.turnWindowOff(windowId);
+        return windowServices.closeWindow(windowId);
     }
 
     @PUT
     @Path("/{windowId}/turnOn")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Window turnWindowOn(@PathParam("windowId") String windowId, @PathParam("userId") String userId) {
+    public Window openWindow(@PathParam("windowId") String windowId, @PathParam("userId") String userId) {
         System.out.println("Turn user: " + userId + " window on");
-        return windowServices.turnWindowOn(windowId);
+        return windowServices.openWindow(windowId);
     }
 
     @GET
