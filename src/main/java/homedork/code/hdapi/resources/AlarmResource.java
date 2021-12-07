@@ -55,12 +55,5 @@ public class AlarmResource {
         System.out.println("Slide user: " + userId + " alarm to value: " + value);
         return alarmServices.slideAlarmLevel(alarmId, value);
     }
-//
-//    @DELETE
-//    @Path("/{alarmId}/delete")
-//    @Produces(MediaType.APPLICATION_JSON)
-//    @Consumes(MediaType.APPLICATION_JSON)
-//    public Alarm deleteAlarm(@PathParam("alarmId") String alarmId) {
-//        return alarmServices.deleteAlarm(alarmId);
-//    }
+
 }

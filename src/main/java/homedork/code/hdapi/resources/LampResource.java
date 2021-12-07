@@ -56,12 +56,5 @@ public class LampResource {
         System.out.println("Slide user: " + userId + " lamp to value: " + value);
         return lampServices.slideLampLevel(lampId, value);
     }
-//
-//    @DELETE
-//    @Path("/{lampId}/delete")
-//    @Produces(MediaType.APPLICATION_JSON)
-//    @Consumes(MediaType.APPLICATION_JSON)
-//    public Lamp deleteLamp(@PathParam("lampId") String lampId) {
-//        return lampServices.deleteLamp(lampId);
-//    }
+
 }

@@ -56,13 +56,4 @@ public class CurtainServices {
         }
         return null;
     }
-
-    public Curtain deleteCurtain(String curtainId) {
-        try {
-            return queryBuilder.deleteGenericDevice(curtainId);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 }

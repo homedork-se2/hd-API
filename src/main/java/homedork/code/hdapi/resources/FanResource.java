@@ -56,12 +56,5 @@ public class FanResource {
 		System.out.println("Slide user: " + userId + " fan to value: " + value);
 		return fanServices.slideFanLevel(fanId, value);
 	}
-//
-//	@DELETE
-//	@Path("/{fanId}/delete")
-//	@Produces(MediaType.APPLICATION_JSON)
-//	@Consumes(MediaType.APPLICATION_JSON)
-//	public Fan deleteFan(@PathParam("fanId") String fanId) {
-//		return fanServices.deleteFan(fanId);
-//	}
+
 }

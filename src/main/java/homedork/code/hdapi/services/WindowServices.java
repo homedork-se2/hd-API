@@ -55,13 +55,4 @@ public class WindowServices {
         }
         return null;
     }
-
-    public Window deleteWindow(String windowId) {
-        try {
-            return queryBuilder.deleteGenericDevice(windowId);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 }

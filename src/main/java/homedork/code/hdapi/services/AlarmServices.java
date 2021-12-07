@@ -55,13 +55,4 @@ public class AlarmServices {
         }
         return null;
     }
-
-    public Alarm deleteAlarm(String alarmId) {
-        try {
-            return queryBuilder.deleteGenericDevice(alarmId);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 }

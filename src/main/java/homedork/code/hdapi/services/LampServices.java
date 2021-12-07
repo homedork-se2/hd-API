@@ -56,13 +56,4 @@ public class LampServices {
 		}
 		return null;
 	}
-
-	public Lamp deleteLamp(String lampId) {
-		try {
-			return queryBuilder.deleteGenericDevice(lampId);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
 }

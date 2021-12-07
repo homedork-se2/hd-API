@@ -180,11 +180,6 @@ public class QueryBuilder {
         return (T) jsonGenericHandler(query);
     }
 
-    public <T> T deleteGenericDevice(String deviceId) throws IOException {
-        String query = String.format("DELETE * from devices WHERE id='%s';", deviceId);
-        return jsonGenericHandler(query);
-    }
-
 	public <T> T removeDevice(String deviceId) throws IOException {
 		String query = String.format("DELETE FROM devices WHERE id='%s';", deviceId);
 		return jsonGenericHandler(query);

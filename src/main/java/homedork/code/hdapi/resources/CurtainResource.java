@@ -56,12 +56,5 @@ public class CurtainResource {
 		System.out.println("Slide user: " + userId + " curtain to value: " + value);
 		return curtainServices.slideCurtainLevel(curtainId, value);
 	}
-//
-//	@DELETE
-//	@Path("/{curtainId}/delete")
-//	@Produces(MediaType.APPLICATION_JSON)
-//	@Consumes(MediaType.APPLICATION_JSON)
-//	public Curtain deleteCurtain(@PathParam("curtainId") String curtainId) {
-//		return curtainServices.deleteCurtain(curtainId);
-//	}
+
 }

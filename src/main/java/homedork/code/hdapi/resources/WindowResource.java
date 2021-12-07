@@ -56,12 +56,5 @@ public class WindowResource {
         System.out.println("Slide user: " + userId + " window to value: " + value);
         return windowServices.slideWindowLevel(windowId, value);
     }
-//
-//    @DELETE
-//    @Path("/{windowId}/delete")
-//    @Produces(MediaType.APPLICATION_JSON)
-//    @Consumes(MediaType.APPLICATION_JSON)
-//    public Window deleteWindow(@PathParam("windowId") String windowId) {
-//        return windowServices.deleteWindow(windowId);
-//    }
+
 }

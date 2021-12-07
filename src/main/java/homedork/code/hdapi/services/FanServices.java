@@ -56,13 +56,4 @@ public class FanServices {
 		}
 		return null;
 	}
-
-	public Fan deleteFan(String fanId) {
-		try {
-			return queryBuilder.deleteGenericDevice(fanId);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
 }

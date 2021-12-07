@@ -56,13 +56,4 @@ public class ThermServices {
         }
         return null;
     }
-
-    public Thermometer deleteTherm(String thermId) {
-        try {
-            return queryBuilder.deleteGenericDevice(thermId);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 }
