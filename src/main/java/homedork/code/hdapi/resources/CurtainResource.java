@@ -1,6 +1,5 @@
 package homedork.code.hdapi.resources;
 
-import homedork.code.hdapi.model.Alarm;
 import homedork.code.hdapi.model.Curtain;
 import homedork.code.hdapi.services.CurtainServices;
 
