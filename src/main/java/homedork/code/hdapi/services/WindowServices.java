@@ -20,7 +20,7 @@ public class WindowServices {
         return null;
     }
 
-    public Window turnWindowOff(String windowId) {
+    public Window closeWindow(String windowId) {
         try {
             return queryBuilder.turnDeviceOffGeneric(windowId, DeviceType.WINDOW);
         } catch (IOException e) {
@@ -29,7 +29,7 @@ public class WindowServices {
         return null;
     }
 
-    public Window turnWindowOn(String windowId) {
+    public Window openWindow(String windowId) {
         try {
             return queryBuilder.turnDeviceOnGeneric(windowId, DeviceType.WINDOW);
         } catch (IOException e) {

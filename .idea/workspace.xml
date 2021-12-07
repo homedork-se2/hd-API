@@ -9,15 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e161120b-1dc8-45be-9def-572ea53de1ee" name="Changes" comment="returning an empty list instead of null on fail user ID.">
+    <list default="true" id="e161120b-1dc8-45be-9def-572ea53de1ee" name="Changes" comment="remove device.">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/comm/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/comm/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/dataservices/QueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/dataservices/QueryBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/CurtainResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/CurtainResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/UserResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/UserServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/comm/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/comm/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/dataservices/QueryBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/dataservices/QueryBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/UserResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homedork/code/hdapi/resources/UserResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/WindowResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/resources/WindowResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/CurtainServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/CurtainServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/WindowServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homedork/code/hdapi/services/WindowServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/CurtainServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/CurtainServicesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/UserServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/UserServicesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/WindowServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homedork/code/hdapi/services/WindowServicesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +99,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../hd-server" />
@@ -123,15 +126,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.52">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -303,12 +304,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Tomcat 9.0.52" />
       <item itemvalue="JUnit.LampServicesTest" />
       <item itemvalue="JUnit.WindowServicesTest" />
       <item itemvalue="JUnit.AlarmServicesTest" />
       <item itemvalue="JUnit.FanServicesTest.getAllFans" />
       <item itemvalue="JUnit.FanServicesTest" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.52" />
     </list>
     <recent_temporary>
       <list>
@@ -338,6 +339,7 @@
       <workItem from="1636030653046" duration="10263000" />
       <workItem from="1636561078233" duration="12673000" />
       <workItem from="1637575344684" duration="8449000" />
+      <workItem from="1638869502001" duration="1443000" />
     </task>
     <task id="LOCAL-00001" summary="removed main">
       <created>1633959232223</created>
@@ -423,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638176366727</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="remove device.">
+      <created>1638376265472</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1638376265472</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +461,8 @@
     <MESSAGE value="pom file fix maybe" />
     <MESSAGE value="JUNIT TEST MODIFICATIONS - (ALL PASS)" />
     <MESSAGE value="returning an empty list instead of null on fail user ID." />
-    <option name="LAST_COMMIT_MESSAGE" value="returning an empty list instead of null on fail user ID." />
+    <MESSAGE value="remove device." />
+    <option name="LAST_COMMIT_MESSAGE" value="remove device." />
   </component>
   <component name="regexState">
     <option name="map">

@@ -20,7 +20,7 @@ public class CurtainServices {
         return null;
     }
 
-    public Curtain turnCurtainOff(String curtainId) {
+    public Curtain closeCurtain(String curtainId) {
         try {
             return queryBuilder.turnDeviceOffGeneric(curtainId, DeviceType.CURTAIN);
         } catch (IOException e) {
@@ -29,7 +29,7 @@ public class CurtainServices {
         return null;
     }
 
-    public Curtain turnCurtainOn(String curtainId) {
+    public Curtain openCurtain(String curtainId) {
         try {
             return queryBuilder.turnDeviceOnGeneric(curtainId, DeviceType.CURTAIN);
         } catch (IOException e) {

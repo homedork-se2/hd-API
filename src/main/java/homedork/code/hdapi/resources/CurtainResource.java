@@ -24,18 +24,18 @@ public class CurtainResource {
 	@Path("/{curtainId}/turnOff")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Curtain turnCurtainOff(@PathParam("curtainId") String curtainId, @PathParam("userId") String userId) {
+	public Curtain closeCurtain(@PathParam("curtainId") String curtainId, @PathParam("userId") String userId) {
 		System.out.println("Turn user: " + userId + " curtain off");
-		return curtainServices.turnCurtainOff(curtainId);
+		return curtainServices.closeCurtain(curtainId);
 	}
 
 	@PUT
 	@Path("/{curtainId}/turnOn")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Curtain turnCurtainOn(@PathParam("curtainId") String curtainId, @PathParam("userId") String userId) {
+	public Curtain openCurtain(@PathParam("curtainId") String curtainId, @PathParam("userId") String userId) {
 		System.out.println("Turn user: " + userId + " curtain on");
-		return curtainServices.turnCurtainOn(curtainId);
+		return curtainServices.openCurtain(curtainId);
 	}
 
 	@GET

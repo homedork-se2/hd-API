@@ -84,6 +84,12 @@ public class UserResource {
         return userServices.addNewUser(userObject);
     }
 
+    /**
+     *
+     * @param userId - user ID
+     * @param deviceId - device ID
+     * @return removed device
+     */
     @DELETE
     @Path("/{userId}/remove-device/{deviceId}")
     @Consumes(MediaType.APPLICATION_JSON)
