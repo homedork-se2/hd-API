@@ -100,6 +100,19 @@ public class UserResource {
         return userServices.removeDevice(deviceId);
     }
 
+    /**
+     *
+     * @param userId - user ID
+     * @return - User Object
+     */
+    @DELETE
+    @Path("/{userId}/delete")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public User deleteUser(@PathParam("userId") String userId) {
+        return userServices.deleteUser(userId);
+    }
+
 
     /* ******* User's Devices ************** */
 
@@ -151,11 +164,5 @@ public class UserResource {
         return new WindowResource();
     }
 
-	@DELETE
-	@Path("/{userId}/delete")
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public User deleteUser(@PathParam("userId") String userId) {
-		return userServices.deleteUser(userId);
-	}
+
 }

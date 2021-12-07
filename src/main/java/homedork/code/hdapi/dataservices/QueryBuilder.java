@@ -86,7 +86,6 @@ public class QueryBuilder {
         return null;
     }
 
-    // Generic methods need to be tested
     @SuppressWarnings("unchecked")
     private <T> T jsonGenericHandler(String query) throws IOException {
         boolean b = client.sendQuery(query);
@@ -151,7 +150,6 @@ public class QueryBuilder {
         return null;
     }
 
-    @SuppressWarnings("unchecked")
     public <T> T turnDeviceOffGeneric(String deviceId, DeviceType type) throws IOException {
         String query;
         if (type == DeviceType.WINDOW)
@@ -159,10 +157,9 @@ public class QueryBuilder {
         else
             query = String.format("UPDATE devices SET state='OFF', level=" + 0.0 + " WHERE id='%s';", deviceId);
 
-        return (T) jsonGenericHandler(query);
+        return jsonGenericHandler(query);
     }
 
-    @SuppressWarnings("unchecked")
     public <T> T turnDeviceOnGeneric(String deviceId, DeviceType type) throws IOException {
         String query;
         if (type == DeviceType.WINDOW)
@@ -170,10 +167,9 @@ public class QueryBuilder {
         else
             query = String.format("UPDATE devices SET state='ON', level=" + 80.0 + " WHERE id='%s';", deviceId);
 
-        return (T) jsonGenericHandler(query);
+        return jsonGenericHandler(query);
     }
 
-    @SuppressWarnings("unchecked")
     public <T> T deviceSlideLevelGeneric(double level, String deviceId, DeviceType type) throws IOException {
         String query;
         if (type == DeviceType.WINDOW)
@@ -181,7 +177,7 @@ public class QueryBuilder {
         else
             query = String.format("UPDATE devices SET state='ON', level=" + level + " WHERE id='%s';", deviceId);
 
-        return (T) jsonGenericHandler(query);
+        return jsonGenericHandler(query);
     }
 
     public <T> T removeDevice(String deviceId) throws IOException {
